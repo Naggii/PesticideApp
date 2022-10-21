@@ -25,8 +25,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listData.count
     }
