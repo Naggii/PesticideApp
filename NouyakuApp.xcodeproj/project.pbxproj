@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE328FEBFD400450E07 /* AppDelegate.swift */; };
+		BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE528FEBFD400450E07 /* SceneDelegate.swift */; };
+		BD772CE828FEBFD400450E07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE728FEBFD400450E07 /* HomeViewController.swift */; };
+		BD772CEB28FEBFD400450E07 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD772CE928FEBFD400450E07 /* Home.storyboard */; };
+		BD772CED28FEBFD600450E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD772CEC28FEBFD600450E07 /* Assets.xcassets */; };
+		BD772CFB28FEBFD700450E07 /* NouyakuAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CFA28FEBFD700450E07 /* NouyakuAppTests.swift */; };
+		BD772D0528FEBFD700450E07 /* NouyakuAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D0428FEBFD700450E07 /* NouyakuAppUITests.swift */; };
+		BD772D0728FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */; };
+		BD772D1528FEC55800450E07 /* NouyakuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D1328FEC55800450E07 /* NouyakuCustomCell.swift */; };
+		BD772D1628FEC55800450E07 /* NouyakuCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD772D1428FEC55800450E07 /* NouyakuCustomCell.xib */; };
+		BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */; };
+		BDCA2455290304D50054294D /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2454290304D50054294D /* Splash.storyboard */; };
+		BDCA2457290304E10054294D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2456290304E10054294D /* SplashViewController.swift */; };
+		BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA245C29030AB40054294D /* LaunchScreen.swift */; };
+		BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDCA245E29031D0F0054294D /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD772CF728FEBFD700450E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD772CD828FEBFD400450E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD772CDF28FEBFD400450E07;
+			remoteInfo = NouyakuApp;
+		};
+		BD772D0128FEBFD700450E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD772CD828FEBFD400450E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD772CDF28FEBFD400450E07;
+			remoteInfo = NouyakuApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD772CE028FEBFD400450E07 /* NouyakuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NouyakuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD772CE328FEBFD400450E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD772CE528FEBFD400450E07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BD772CE728FEBFD400450E07 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BD772CEA28FEBFD400450E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		BD772CEC28FEBFD600450E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD772CF128FEBFD600450E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD772CF628FEBFD700450E07 /* NouyakuAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NouyakuAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD772CFA28FEBFD700450E07 /* NouyakuAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuAppTests.swift; sourceTree = "<group>"; };
+		BD772D0028FEBFD700450E07 /* NouyakuAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NouyakuAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD772D0428FEBFD700450E07 /* NouyakuAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuAppUITests.swift; sourceTree = "<group>"; };
+		BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD772D1328FEC55800450E07 /* NouyakuCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuCustomCell.swift; sourceTree = "<group>"; };
+		BD772D1428FEC55800450E07 /* NouyakuCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NouyakuCustomCell.xib; sourceTree = "<group>"; };
+		BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialogViewController.swift; sourceTree = "<group>"; };
+		BDCA2454290304D50054294D /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		BDCA2456290304E10054294D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BDCA245C29030AB40054294D /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		BDCA245E29031D0F0054294D /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD772CDD28FEBFD400450E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD772CF328FEBFD700450E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD772CFD28FEBFD700450E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD772CD728FEBFD400450E07 = {
+			isa = PBXGroup;
+			children = (
+				BD772CE228FEBFD400450E07 /* NouyakuApp */,
+				BD772CF928FEBFD700450E07 /* NouyakuAppTests */,
+				BD772D0328FEBFD700450E07 /* NouyakuAppUITests */,
+				BD772CE128FEBFD400450E07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD772CE128FEBFD400450E07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD772CE028FEBFD400450E07 /* NouyakuApp.app */,
+				BD772CF628FEBFD700450E07 /* NouyakuAppTests.xctest */,
+				BD772D0028FEBFD700450E07 /* NouyakuAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD772CE228FEBFD400450E07 /* NouyakuApp */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA24592903078C0054294D /* Splash */,
+				BDCA2458290307770054294D /* CustomCells */,
+				BDCA244B2902EE100054294D /* Home */,
+				BDCA244A2902EE050054294D /* Dialog */,
+				BD772CE328FEBFD400450E07 /* AppDelegate.swift */,
+				BD772CE528FEBFD400450E07 /* SceneDelegate.swift */,
+				BD772CEC28FEBFD600450E07 /* Assets.xcassets */,
+				BDCA245E29031D0F0054294D /* LaunchScreen.xib */,
+				BDCA245C29030AB40054294D /* LaunchScreen.swift */,
+				BD772CF128FEBFD600450E07 /* Info.plist */,
+			);
+			path = NouyakuApp;
+			sourceTree = "<group>";
+		};
+		BD772CF928FEBFD700450E07 /* NouyakuAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD772CFA28FEBFD700450E07 /* NouyakuAppTests.swift */,
+			);
+			path = NouyakuAppTests;
+			sourceTree = "<group>";
+		};
+		BD772D0328FEBFD700450E07 /* NouyakuAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD772D0428FEBFD700450E07 /* NouyakuAppUITests.swift */,
+				BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */,
+			);
+			path = NouyakuAppUITests;
+			sourceTree = "<group>";
+		};
+		BDCA244A2902EE050054294D /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		BDCA244B2902EE100054294D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BD772CE928FEBFD400450E07 /* Home.storyboard */,
+				BD772CE728FEBFD400450E07 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BDCA2458290307770054294D /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				BD772D1428FEC55800450E07 /* NouyakuCustomCell.xib */,
+				BD772D1328FEC55800450E07 /* NouyakuCustomCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		BDCA24592903078C0054294D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA2454290304D50054294D /* Splash.storyboard */,
+				BDCA2456290304E10054294D /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD772CDF28FEBFD400450E07 /* NouyakuApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD772D0A28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuApp" */;
+			buildPhases = (
+				BD772CDC28FEBFD400450E07 /* Sources */,
+				BD772CDD28FEBFD400450E07 /* Frameworks */,
+				BD772CDE28FEBFD400450E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NouyakuApp;
+			productName = NouyakuApp;
+			productReference = BD772CE028FEBFD400450E07 /* NouyakuApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD772CF528FEBFD700450E07 /* NouyakuAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD772D0D28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppTests" */;
+			buildPhases = (
+				BD772CF228FEBFD700450E07 /* Sources */,
+				BD772CF328FEBFD700450E07 /* Frameworks */,
+				BD772CF428FEBFD700450E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD772CF828FEBFD700450E07 /* PBXTargetDependency */,
+			);
+			name = NouyakuAppTests;
+			productName = NouyakuAppTests;
+			productReference = BD772CF628FEBFD700450E07 /* NouyakuAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD772CFF28FEBFD700450E07 /* NouyakuAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD772D1028FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppUITests" */;
+			buildPhases = (
+				BD772CFC28FEBFD700450E07 /* Sources */,
+				BD772CFD28FEBFD700450E07 /* Frameworks */,
+				BD772CFE28FEBFD700450E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD772D0228FEBFD700450E07 /* PBXTargetDependency */,
+			);
+			name = NouyakuAppUITests;
+			productName = NouyakuAppUITests;
+			productReference = BD772D0028FEBFD700450E07 /* NouyakuAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD772CD828FEBFD400450E07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					BD772CDF28FEBFD400450E07 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					BD772CF528FEBFD700450E07 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = BD772CDF28FEBFD400450E07;
+					};
+					BD772CFF28FEBFD700450E07 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = BD772CDF28FEBFD400450E07;
+					};
+				};
+			};
+			buildConfigurationList = BD772CDB28FEBFD400450E07 /* Build configuration list for PBXProject "NouyakuApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD772CD728FEBFD400450E07;
+			productRefGroup = BD772CE128FEBFD400450E07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD772CDF28FEBFD400450E07 /* NouyakuApp */,
+				BD772CF528FEBFD700450E07 /* NouyakuAppTests */,
+				BD772CFF28FEBFD700450E07 /* NouyakuAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD772CDE28FEBFD400450E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */,
+				BD772D1628FEC55800450E07 /* NouyakuCustomCell.xib in Resources */,
+				BD772CED28FEBFD600450E07 /* Assets.xcassets in Resources */,
+				BDCA2455290304D50054294D /* Splash.storyboard in Resources */,
+				BD772CEB28FEBFD400450E07 /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD772CF428FEBFD700450E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD772CFE28FEBFD700450E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD772CDC28FEBFD400450E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */,
+				BD772CE828FEBFD400450E07 /* HomeViewController.swift in Sources */,
+				BD772D1528FEC55800450E07 /* NouyakuCustomCell.swift in Sources */,
+				BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */,
+				BDCA2457290304E10054294D /* SplashViewController.swift in Sources */,
+				BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */,
+				BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD772CF228FEBFD700450E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD772CFB28FEBFD700450E07 /* NouyakuAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD772CFC28FEBFD700450E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD772D0528FEBFD700450E07 /* NouyakuAppUITests.swift in Sources */,
+				BD772D0728FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD772CF828FEBFD700450E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD772CDF28FEBFD400450E07 /* NouyakuApp */;
+			targetProxy = BD772CF728FEBFD700450E07 /* PBXContainerItemProxy */;
+		};
+		BD772D0228FEBFD700450E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD772CDF28FEBFD400450E07 /* NouyakuApp */;
+			targetProxy = BD772D0128FEBFD700450E07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD772CE928FEBFD400450E07 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD772CEA28FEBFD400450E07 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD772D0828FEBFD700450E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD772D0928FEBFD700450E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD772D0B28FEBFD700450E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NouyakuApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayumunagai.NouyakuApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD772D0C28FEBFD700450E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NouyakuApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayumunagai.NouyakuApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD772D0E28FEBFD700450E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayumunagai.NouyakuAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NouyakuApp.app/NouyakuApp";
+			};
+			name = Debug;
+		};
+		BD772D0F28FEBFD700450E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayumunagai.NouyakuAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NouyakuApp.app/NouyakuApp";
+			};
+			name = Release;
+		};
+		BD772D1128FEBFD700450E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayumunagai.NouyakuAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NouyakuApp;
+			};
+			name = Debug;
+		};
+		BD772D1228FEBFD700450E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayumunagai.NouyakuAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NouyakuApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD772CDB28FEBFD400450E07 /* Build configuration list for PBXProject "NouyakuApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD772D0828FEBFD700450E07 /* Debug */,
+				BD772D0928FEBFD700450E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD772D0A28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD772D0B28FEBFD700450E07 /* Debug */,
+				BD772D0C28FEBFD700450E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD772D0D28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD772D0E28FEBFD700450E07 /* Debug */,
+				BD772D0F28FEBFD700450E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD772D1028FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD772D1128FEBFD700450E07 /* Debug */,
+				BD772D1228FEBFD700450E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD772CD828FEBFD400450E07 /* Project object */;
+}
