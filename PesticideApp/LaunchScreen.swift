@@ -16,7 +16,7 @@ class LaunchScreenManager {
     // MARK: - Properties
     
     // Using a singleton instance and setting animationDurationBase on init makes this class easier to test
-    static let instance = LaunchScreenManager(animationDurationBase: 1.2)
+    static let instance = LaunchScreenManager(animationDurationBase: 1.0)
     
     var view: UIView?
     var parentView: UIView?
@@ -50,18 +50,22 @@ class LaunchScreenManager {
     }
     
     func hideRingSegments() {
-        let seg = view!.viewWithTag(1)!
+        let seg = view!.viewWithTag(3)!
+        let seg2 = view!.viewWithTag(2)!
+        
+        seg2.isHidden = false
         
         UIView.animate(
-            withDuration: animationDurationBase * 1.75,
-            delay: animationDurationBase / 1.5,
+            withDuration: 0.8,
+            delay: 1.0,
             options: .curveLinear,
             animations: {
                 seg.alpha = 0.0
+                seg2.alpha = 0.0
             },
             completion: { _ in
                 UIView.animate(
-                    withDuration: 1.0,
+                    withDuration: 0.5,
                     delay: 0.0,
                     options: .curveLinear,
                     animations: {

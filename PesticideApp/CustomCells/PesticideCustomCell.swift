@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NouyakuCustomCell: UITableViewCell, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class PesticideCustomCell: UITableViewCell, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet weak var txtNouyakuCount: UILabel!
     @IBOutlet weak var imgNouyaku: UIImageView!

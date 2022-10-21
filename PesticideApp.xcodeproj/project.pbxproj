@@ -15,13 +15,19 @@
 		BD772CFB28FEBFD700450E07 /* NouyakuAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CFA28FEBFD700450E07 /* NouyakuAppTests.swift */; };
 		BD772D0528FEBFD700450E07 /* NouyakuAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D0428FEBFD700450E07 /* NouyakuAppUITests.swift */; };
 		BD772D0728FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */; };
-		BD772D1528FEC55800450E07 /* NouyakuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D1328FEC55800450E07 /* NouyakuCustomCell.swift */; };
-		BD772D1628FEC55800450E07 /* NouyakuCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD772D1428FEC55800450E07 /* NouyakuCustomCell.xib */; };
+		BD772D1528FEC55800450E07 /* PesticideCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D1328FEC55800450E07 /* PesticideCustomCell.swift */; };
+		BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */; };
 		BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */; };
 		BDCA2455290304D50054294D /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2454290304D50054294D /* Splash.storyboard */; };
 		BDCA2457290304E10054294D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2456290304E10054294D /* SplashViewController.swift */; };
 		BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA245C29030AB40054294D /* LaunchScreen.swift */; };
 		BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDCA245E29031D0F0054294D /* LaunchScreen.xib */; };
+		BDCA2467290321AB0054294D /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2461290321AB0054294D /* NotoSansJP-Bold.otf */; };
+		BDCA2468290321AB0054294D /* NotoSansJP-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2462290321AB0054294D /* NotoSansJP-Black.otf */; };
+		BDCA2469290321AB0054294D /* NotoSansJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2463290321AB0054294D /* NotoSansJP-Medium.otf */; };
+		BDCA246A290321AB0054294D /* NotoSansJP-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */; };
+		BDCA246B290321AB0054294D /* NotoSansJP-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */; };
+		BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,25 +48,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD772CE028FEBFD400450E07 /* NouyakuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NouyakuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD772CE028FEBFD400450E07 /* PesticideApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PesticideApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD772CE328FEBFD400450E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD772CE528FEBFD400450E07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BD772CE728FEBFD400450E07 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BD772CEA28FEBFD400450E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		BD772CEC28FEBFD600450E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD772CF128FEBFD600450E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD772CF628FEBFD700450E07 /* NouyakuAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NouyakuAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD772CF628FEBFD700450E07 /* PesticideAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PesticideAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD772CFA28FEBFD700450E07 /* NouyakuAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuAppTests.swift; sourceTree = "<group>"; };
-		BD772D0028FEBFD700450E07 /* NouyakuAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NouyakuAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD772D0028FEBFD700450E07 /* PesticideAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PesticideAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD772D0428FEBFD700450E07 /* NouyakuAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuAppUITests.swift; sourceTree = "<group>"; };
 		BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BD772D1328FEC55800450E07 /* NouyakuCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuCustomCell.swift; sourceTree = "<group>"; };
-		BD772D1428FEC55800450E07 /* NouyakuCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NouyakuCustomCell.xib; sourceTree = "<group>"; };
+		BD772D1328FEC55800450E07 /* PesticideCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideCustomCell.swift; sourceTree = "<group>"; };
+		BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PesticideCustomCell.xib; sourceTree = "<group>"; };
 		BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialogViewController.swift; sourceTree = "<group>"; };
 		BDCA2454290304D50054294D /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		BDCA2456290304E10054294D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BDCA245C29030AB40054294D /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		BDCA245E29031D0F0054294D /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		BDCA2461290321AB0054294D /* NotoSansJP-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Bold.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Bold.otf"; sourceTree = "<group>"; };
+		BDCA2462290321AB0054294D /* NotoSansJP-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Black.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Black.otf"; sourceTree = "<group>"; };
+		BDCA2463290321AB0054294D /* NotoSansJP-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Medium.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Medium.otf"; sourceTree = "<group>"; };
+		BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Thin.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Thin.otf"; sourceTree = "<group>"; };
+		BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Light.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Light.otf"; sourceTree = "<group>"; };
+		BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Regular.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +103,8 @@
 		BD772CD728FEBFD400450E07 = {
 			isa = PBXGroup;
 			children = (
-				BD772CE228FEBFD400450E07 /* NouyakuApp */,
-				BD772CF928FEBFD700450E07 /* NouyakuAppTests */,
+				BD772CE228FEBFD400450E07 /* PesticideApp */,
+				BD772CF928FEBFD700450E07 /* PesticideAppTests */,
 				BD772D0328FEBFD700450E07 /* NouyakuAppUITests */,
 				BD772CE128FEBFD400450E07 /* Products */,
 			);
@@ -101,16 +113,17 @@
 		BD772CE128FEBFD400450E07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD772CE028FEBFD400450E07 /* NouyakuApp.app */,
-				BD772CF628FEBFD700450E07 /* NouyakuAppTests.xctest */,
-				BD772D0028FEBFD700450E07 /* NouyakuAppUITests.xctest */,
+				BD772CE028FEBFD400450E07 /* PesticideApp.app */,
+				BD772CF628FEBFD700450E07 /* PesticideAppTests.xctest */,
+				BD772D0028FEBFD700450E07 /* PesticideAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD772CE228FEBFD400450E07 /* NouyakuApp */ = {
+		BD772CE228FEBFD400450E07 /* PesticideApp */ = {
 			isa = PBXGroup;
 			children = (
+				BDCA2460290321800054294D /* font */,
 				BDCA24592903078C0054294D /* Splash */,
 				BDCA2458290307770054294D /* CustomCells */,
 				BDCA244B2902EE100054294D /* Home */,
@@ -122,15 +135,15 @@
 				BDCA245C29030AB40054294D /* LaunchScreen.swift */,
 				BD772CF128FEBFD600450E07 /* Info.plist */,
 			);
-			path = NouyakuApp;
+			path = PesticideApp;
 			sourceTree = "<group>";
 		};
-		BD772CF928FEBFD700450E07 /* NouyakuAppTests */ = {
+		BD772CF928FEBFD700450E07 /* PesticideAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				BD772CFA28FEBFD700450E07 /* NouyakuAppTests.swift */,
 			);
-			path = NouyakuAppTests;
+			path = PesticideAppTests;
 			sourceTree = "<group>";
 		};
 		BD772D0328FEBFD700450E07 /* NouyakuAppUITests */ = {
@@ -162,8 +175,8 @@
 		BDCA2458290307770054294D /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				BD772D1428FEC55800450E07 /* NouyakuCustomCell.xib */,
-				BD772D1328FEC55800450E07 /* NouyakuCustomCell.swift */,
+				BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */,
+				BD772D1328FEC55800450E07 /* PesticideCustomCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -177,12 +190,25 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		BDCA2460290321800054294D /* font */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA2462290321AB0054294D /* NotoSansJP-Black.otf */,
+				BDCA2461290321AB0054294D /* NotoSansJP-Bold.otf */,
+				BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */,
+				BDCA2463290321AB0054294D /* NotoSansJP-Medium.otf */,
+				BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */,
+				BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD772CDF28FEBFD400450E07 /* NouyakuApp */ = {
+		BD772CDF28FEBFD400450E07 /* PesticideApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD772D0A28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuApp" */;
+			buildConfigurationList = BD772D0A28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideApp" */;
 			buildPhases = (
 				BD772CDC28FEBFD400450E07 /* Sources */,
 				BD772CDD28FEBFD400450E07 /* Frameworks */,
@@ -192,14 +218,14 @@
 			);
 			dependencies = (
 			);
-			name = NouyakuApp;
+			name = PesticideApp;
 			productName = NouyakuApp;
-			productReference = BD772CE028FEBFD400450E07 /* NouyakuApp.app */;
+			productReference = BD772CE028FEBFD400450E07 /* PesticideApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BD772CF528FEBFD700450E07 /* NouyakuAppTests */ = {
+		BD772CF528FEBFD700450E07 /* PesticideAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD772D0D28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppTests" */;
+			buildConfigurationList = BD772D0D28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideAppTests" */;
 			buildPhases = (
 				BD772CF228FEBFD700450E07 /* Sources */,
 				BD772CF328FEBFD700450E07 /* Frameworks */,
@@ -210,14 +236,14 @@
 			dependencies = (
 				BD772CF828FEBFD700450E07 /* PBXTargetDependency */,
 			);
-			name = NouyakuAppTests;
+			name = PesticideAppTests;
 			productName = NouyakuAppTests;
-			productReference = BD772CF628FEBFD700450E07 /* NouyakuAppTests.xctest */;
+			productReference = BD772CF628FEBFD700450E07 /* PesticideAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD772CFF28FEBFD700450E07 /* NouyakuAppUITests */ = {
+		BD772CFF28FEBFD700450E07 /* PesticideAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD772D1028FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppUITests" */;
+			buildConfigurationList = BD772D1028FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideAppUITests" */;
 			buildPhases = (
 				BD772CFC28FEBFD700450E07 /* Sources */,
 				BD772CFD28FEBFD700450E07 /* Frameworks */,
@@ -228,9 +254,9 @@
 			dependencies = (
 				BD772D0228FEBFD700450E07 /* PBXTargetDependency */,
 			);
-			name = NouyakuAppUITests;
+			name = PesticideAppUITests;
 			productName = NouyakuAppUITests;
-			productReference = BD772D0028FEBFD700450E07 /* NouyakuAppUITests.xctest */;
+			productReference = BD772D0028FEBFD700450E07 /* PesticideAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -256,7 +282,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BD772CDB28FEBFD400450E07 /* Build configuration list for PBXProject "NouyakuApp" */;
+			buildConfigurationList = BD772CDB28FEBFD400450E07 /* Build configuration list for PBXProject "PesticideApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,9 +295,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD772CDF28FEBFD400450E07 /* NouyakuApp */,
-				BD772CF528FEBFD700450E07 /* NouyakuAppTests */,
-				BD772CFF28FEBFD700450E07 /* NouyakuAppUITests */,
+				BD772CDF28FEBFD400450E07 /* PesticideApp */,
+				BD772CF528FEBFD700450E07 /* PesticideAppTests */,
+				BD772CFF28FEBFD700450E07 /* PesticideAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,11 +307,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */,
 				BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */,
-				BD772D1628FEC55800450E07 /* NouyakuCustomCell.xib in Resources */,
+				BDCA2469290321AB0054294D /* NotoSansJP-Medium.otf in Resources */,
+				BDCA2467290321AB0054294D /* NotoSansJP-Bold.otf in Resources */,
+				BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */,
 				BD772CED28FEBFD600450E07 /* Assets.xcassets in Resources */,
 				BDCA2455290304D50054294D /* Splash.storyboard in Resources */,
 				BD772CEB28FEBFD400450E07 /* Home.storyboard in Resources */,
+				BDCA246A290321AB0054294D /* NotoSansJP-Thin.otf in Resources */,
+				BDCA2468290321AB0054294D /* NotoSansJP-Black.otf in Resources */,
+				BDCA246B290321AB0054294D /* NotoSansJP-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +344,7 @@
 			files = (
 				BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */,
 				BD772CE828FEBFD400450E07 /* HomeViewController.swift in Sources */,
-				BD772D1528FEC55800450E07 /* NouyakuCustomCell.swift in Sources */,
+				BD772D1528FEC55800450E07 /* PesticideCustomCell.swift in Sources */,
 				BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */,
 				BDCA2457290304E10054294D /* SplashViewController.swift in Sources */,
 				BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */,
@@ -342,12 +374,12 @@
 /* Begin PBXTargetDependency section */
 		BD772CF828FEBFD700450E07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BD772CDF28FEBFD400450E07 /* NouyakuApp */;
+			target = BD772CDF28FEBFD400450E07 /* PesticideApp */;
 			targetProxy = BD772CF728FEBFD700450E07 /* PBXContainerItemProxy */;
 		};
 		BD772D0228FEBFD700450E07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BD772CDF28FEBFD400450E07 /* NouyakuApp */;
+			target = BD772CDF28FEBFD400450E07 /* PesticideApp */;
 			targetProxy = BD772D0128FEBFD700450E07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,7 +521,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KEDZPCX5KQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NouyakuApp/Info.plist;
+				INFOPLIST_FILE = PesticideApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
@@ -517,7 +549,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KEDZPCX5KQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NouyakuApp/Info.plist;
+				INFOPLIST_FILE = PesticideApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
@@ -552,7 +584,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NouyakuApp.app/NouyakuApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PesticideApp.app/PesticideApp";
 			};
 			name = Debug;
 		};
@@ -572,7 +604,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NouyakuApp.app/NouyakuApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PesticideApp.app/PesticideApp";
 			};
 			name = Release;
 		};
@@ -615,7 +647,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD772CDB28FEBFD400450E07 /* Build configuration list for PBXProject "NouyakuApp" */ = {
+		BD772CDB28FEBFD400450E07 /* Build configuration list for PBXProject "PesticideApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD772D0828FEBFD700450E07 /* Debug */,
@@ -624,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD772D0A28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuApp" */ = {
+		BD772D0A28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD772D0B28FEBFD700450E07 /* Debug */,
@@ -633,7 +665,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD772D0D28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppTests" */ = {
+		BD772D0D28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD772D0E28FEBFD700450E07 /* Debug */,
@@ -642,7 +674,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD772D1028FEBFD700450E07 /* Build configuration list for PBXNativeTarget "NouyakuAppUITests" */ = {
+		BD772D1028FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD772D1128FEBFD700450E07 /* Debug */,
