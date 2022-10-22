@@ -1,0 +1,20 @@
+PODS:
+  - SideMenu (6.5.0)
+  - SwiftGifOrigin (1.7.0)
+
+DEPENDENCIES:
+  - SideMenu
+  - SwiftGifOrigin
+
+SPEC REPOS:
+  trunk:
+    - SideMenu
+    - SwiftGifOrigin
+
+SPEC CHECKSUMS:
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+
+PODFILE CHECKSUM: 305ca7c318fd81be8ac467bd19e543c0728b0c09
+
+COCOAPODS: 1.11.3

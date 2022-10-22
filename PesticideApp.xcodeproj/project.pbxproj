@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FDA5FCE57FFFEA553E78987 /* Pods_PesticideAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4B1A954099BCD72C8008B /* Pods_PesticideAppTests.framework */; };
+		59268D3BEEF209CB4107CDAD /* Pods_PesticideApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CEB41E39FEE80856C9EAD6 /* Pods_PesticideApp.framework */; };
+		7E5274AD3B072DCA74A5F7E9 /* Pods_PesticideApp_PesticideAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966358D4540515C6A4269146 /* Pods_PesticideApp_PesticideAppUITests.framework */; };
+		BD6CF044290452E7006A03CE /* edit_pencil.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD6CF043290452E6006A03CE /* edit_pencil.gif */; };
 		BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE328FEBFD400450E07 /* AppDelegate.swift */; };
 		BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE528FEBFD400450E07 /* SceneDelegate.swift */; };
 		BD772CE828FEBFD400450E07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE728FEBFD400450E07 /* HomeViewController.swift */; };
@@ -17,6 +21,8 @@
 		BD772D0728FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */; };
 		BD772D1528FEC55800450E07 /* PesticideCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D1328FEC55800450E07 /* PesticideCustomCell.swift */; };
 		BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */; };
+		BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DFFA290443530047EC6F /* SideMenu.storyboard */; };
+		BD81DFFD290446500047EC6F /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DFFC290446500047EC6F /* UITableViewCell+.swift */; };
 		BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */; };
 		BDCA2455290304D50054294D /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2454290304D50054294D /* Splash.storyboard */; };
 		BDCA2457290304E10054294D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2456290304E10054294D /* SplashViewController.swift */; };
@@ -28,6 +34,9 @@
 		BDCA246A290321AB0054294D /* NotoSansJP-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */; };
 		BDCA246B290321AB0054294D /* NotoSansJP-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */; };
 		BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */; };
+		BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA246D29032DCE0054294D /* MenuViewController.swift */; };
+		BDCA247029032F850054294D /* icons8-menu.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDCA246F29032F850054294D /* icons8-menu.gif */; };
+		BDED21BF29046EA700D6DF8D /* BGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED21BE29046EA700D6DF8D /* BGButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12998377001030E74A994817 /* Pods-PesticideApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideApp.release.xcconfig"; path = "Target Support Files/Pods-PesticideApp/Pods-PesticideApp.release.xcconfig"; sourceTree = "<group>"; };
+		23CEB41E39FEE80856C9EAD6 /* Pods_PesticideApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PesticideApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4949B5BA21A3CC78DEF5FF5B /* Pods-PesticideApp-PesticideAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideApp-PesticideAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PesticideApp-PesticideAppUITests/Pods-PesticideApp-PesticideAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		55105C36814D9C186A02ADE1 /* Pods-PesticideAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PesticideAppTests/Pods-PesticideAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		966358D4540515C6A4269146 /* Pods_PesticideApp_PesticideAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PesticideApp_PesticideAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6795E6371D5EF476C1207B7 /* Pods-PesticideAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideAppTests.release.xcconfig"; path = "Target Support Files/Pods-PesticideAppTests/Pods-PesticideAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		BD6CF043290452E6006A03CE /* edit_pencil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = edit_pencil.gif; path = ../../../Downloads/edit_pencil.gif; sourceTree = "<group>"; };
 		BD772CE028FEBFD400450E07 /* PesticideApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PesticideApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD772CE328FEBFD400450E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD772CE528FEBFD400450E07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +78,8 @@
 		BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouyakuAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BD772D1328FEC55800450E07 /* PesticideCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideCustomCell.swift; sourceTree = "<group>"; };
 		BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PesticideCustomCell.xib; sourceTree = "<group>"; };
+		BD81DFFA290443530047EC6F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		BD81DFFC290446500047EC6F /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialogViewController.swift; sourceTree = "<group>"; };
 		BDCA2454290304D50054294D /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		BDCA2456290304E10054294D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +91,12 @@
 		BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Thin.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Thin.otf"; sourceTree = "<group>"; };
 		BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Light.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Light.otf"; sourceTree = "<group>"; };
 		BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Regular.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
+		BDCA246D29032DCE0054294D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BDCA246F29032F850054294D /* icons8-menu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "icons8-menu.gif"; path = "../../../Downloads/icons8-menu.gif"; sourceTree = "<group>"; };
+		BDED21BE29046EA700D6DF8D /* BGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGButton.swift; sourceTree = "<group>"; };
+		CFF4B1A954099BCD72C8008B /* Pods_PesticideAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PesticideAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A19A8A715448876CBCD427 /* Pods-PesticideApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideApp.debug.xcconfig"; path = "Target Support Files/Pods-PesticideApp/Pods-PesticideApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D7BEBE8FDC36B16BE59EA327 /* Pods-PesticideApp-PesticideAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideApp-PesticideAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PesticideApp-PesticideAppUITests/Pods-PesticideApp-PesticideAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59268D3BEEF209CB4107CDAD /* Pods_PesticideApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDA5FCE57FFFEA553E78987 /* Pods_PesticideAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,12 +120,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5274AD3B072DCA74A5F7E9 /* Pods_PesticideApp_PesticideAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071E840872C0994775381469 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3A19A8A715448876CBCD427 /* Pods-PesticideApp.debug.xcconfig */,
+				12998377001030E74A994817 /* Pods-PesticideApp.release.xcconfig */,
+				4949B5BA21A3CC78DEF5FF5B /* Pods-PesticideApp-PesticideAppUITests.debug.xcconfig */,
+				D7BEBE8FDC36B16BE59EA327 /* Pods-PesticideApp-PesticideAppUITests.release.xcconfig */,
+				55105C36814D9C186A02ADE1 /* Pods-PesticideAppTests.debug.xcconfig */,
+				A6795E6371D5EF476C1207B7 /* Pods-PesticideAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		59DBAE13123CC219053E2F41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23CEB41E39FEE80856C9EAD6 /* Pods_PesticideApp.framework */,
+				966358D4540515C6A4269146 /* Pods_PesticideApp_PesticideAppUITests.framework */,
+				CFF4B1A954099BCD72C8008B /* Pods_PesticideAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD772CD728FEBFD400450E07 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +157,8 @@
 				BD772CF928FEBFD700450E07 /* PesticideAppTests */,
 				BD772D0328FEBFD700450E07 /* NouyakuAppUITests */,
 				BD772CE128FEBFD400450E07 /* Products */,
+				071E840872C0994775381469 /* Pods */,
+				59DBAE13123CC219053E2F41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +175,7 @@
 		BD772CE228FEBFD400450E07 /* PesticideApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD81DFF7290440BD0047EC6F /* SideMenu */,
 				BDCA2460290321800054294D /* font */,
 				BDCA24592903078C0054294D /* Splash */,
 				BDCA2458290307770054294D /* CustomCells */,
@@ -134,6 +187,10 @@
 				BDCA245E29031D0F0054294D /* LaunchScreen.xib */,
 				BDCA245C29030AB40054294D /* LaunchScreen.swift */,
 				BD772CF128FEBFD600450E07 /* Info.plist */,
+				BDCA246F29032F850054294D /* icons8-menu.gif */,
+				BD6CF043290452E6006A03CE /* edit_pencil.gif */,
+				BD81DFFC290446500047EC6F /* UITableViewCell+.swift */,
+				BDED21BE29046EA700D6DF8D /* BGButton.swift */,
 			);
 			path = PesticideApp;
 			sourceTree = "<group>";
@@ -153,6 +210,15 @@
 				BD772D0628FEBFD700450E07 /* NouyakuAppUITestsLaunchTests.swift */,
 			);
 			path = NouyakuAppUITests;
+			sourceTree = "<group>";
+		};
+		BD81DFF7290440BD0047EC6F /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				BDCA246D29032DCE0054294D /* MenuViewController.swift */,
+				BD81DFFA290443530047EC6F /* SideMenu.storyboard */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		BDCA244A2902EE050054294D /* Dialog */ = {
@@ -210,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD772D0A28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideApp" */;
 			buildPhases = (
+				0D8CA5670AD0C8C6FF3E286B /* [CP] Check Pods Manifest.lock */,
 				BD772CDC28FEBFD400450E07 /* Sources */,
 				BD772CDD28FEBFD400450E07 /* Frameworks */,
 				BD772CDE28FEBFD400450E07 /* Resources */,
+				A04EE1773B89B46ABF15E266 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +295,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD772D0D28FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideAppTests" */;
 			buildPhases = (
+				8E0D945892F4DC06DC24DF00 /* [CP] Check Pods Manifest.lock */,
 				BD772CF228FEBFD700450E07 /* Sources */,
 				BD772CF328FEBFD700450E07 /* Frameworks */,
 				BD772CF428FEBFD700450E07 /* Resources */,
@@ -245,9 +314,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD772D1028FEBFD700450E07 /* Build configuration list for PBXNativeTarget "PesticideAppUITests" */;
 			buildPhases = (
+				51E0F1D3E24EA5A13F4A7C62 /* [CP] Check Pods Manifest.lock */,
 				BD772CFC28FEBFD700450E07 /* Sources */,
 				BD772CFD28FEBFD700450E07 /* Frameworks */,
 				BD772CFE28FEBFD700450E07 /* Resources */,
+				B3EBD7ECD761311DF73DB66B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,11 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */,
+				BDCA247029032F850054294D /* icons8-menu.gif in Resources */,
 				BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */,
 				BDCA2469290321AB0054294D /* NotoSansJP-Medium.otf in Resources */,
 				BDCA2467290321AB0054294D /* NotoSansJP-Bold.otf in Resources */,
+				BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */,
 				BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */,
 				BD772CED28FEBFD600450E07 /* Assets.xcassets in Resources */,
+				BD6CF044290452E7006A03CE /* edit_pencil.gif in Resources */,
 				BDCA2455290304D50054294D /* Splash.storyboard in Resources */,
 				BD772CEB28FEBFD400450E07 /* Home.storyboard in Resources */,
 				BDCA246A290321AB0054294D /* NotoSansJP-Thin.otf in Resources */,
@@ -337,18 +411,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D8CA5670AD0C8C6FF3E286B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PesticideApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51E0F1D3E24EA5A13F4A7C62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PesticideApp-PesticideAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E0D945892F4DC06DC24DF00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PesticideAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A04EE1773B89B46ABF15E266 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PesticideApp/Pods-PesticideApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PesticideApp/Pods-PesticideApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PesticideApp/Pods-PesticideApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3EBD7ECD761311DF73DB66B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PesticideApp-PesticideAppUITests/Pods-PesticideApp-PesticideAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PesticideApp-PesticideAppUITests/Pods-PesticideApp-PesticideAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PesticideApp-PesticideAppUITests/Pods-PesticideApp-PesticideAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD772CDC28FEBFD400450E07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD81DFFD290446500047EC6F /* UITableViewCell+.swift in Sources */,
 				BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */,
+				BDED21BF29046EA700D6DF8D /* BGButton.swift in Sources */,
 				BD772CE828FEBFD400450E07 /* HomeViewController.swift in Sources */,
 				BD772D1528FEC55800450E07 /* PesticideCustomCell.swift in Sources */,
 				BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */,
 				BDCA2457290304E10054294D /* SplashViewController.swift in Sources */,
 				BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */,
 				BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */,
+				BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +694,7 @@
 		};
 		BD772D0B28FEBFD700450E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A19A8A715448876CBCD427 /* Pods-PesticideApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -542,6 +723,7 @@
 		};
 		BD772D0C28FEBFD700450E07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12998377001030E74A994817 /* Pods-PesticideApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -570,6 +752,7 @@
 		};
 		BD772D0E28FEBFD700450E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55105C36814D9C186A02ADE1 /* Pods-PesticideAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -590,6 +773,7 @@
 		};
 		BD772D0F28FEBFD700450E07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6795E6371D5EF476C1207B7 /* Pods-PesticideAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +794,7 @@
 		};
 		BD772D1128FEBFD700450E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4949B5BA21A3CC78DEF5FF5B /* Pods-PesticideApp-PesticideAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -628,6 +813,7 @@
 		};
 		BD772D1228FEBFD700450E07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7BEBE8FDC36B16BE59EA327 /* Pods-PesticideApp-PesticideAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
