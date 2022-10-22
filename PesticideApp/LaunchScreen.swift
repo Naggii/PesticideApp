@@ -50,7 +50,6 @@ class LaunchScreenManager {
     func hideRingSegments() {
         let seg = view!.viewWithTag(3)!
         let seg2 = view!.viewWithTag(2)!
-        let seg3 = view!.viewWithTag(1)! as! UIImageView
         
         seg2.isHidden = false
         

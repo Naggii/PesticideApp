@@ -51,8 +51,35 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func tapEdit(_ sender: Any) {
+        guard !noyakuTableView.isHidden else {
+            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
+                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
+                                           preferredStyle: .alert)
+            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(dialog, animated: true, completion: nil)
+            return
+        }
         noyakuTableView.isEditing = !noyakuTableView.isEditing
         editViewChanger(isEditing: noyakuTableView.isEditing)
+    }
+    
+    @IBAction func touchRegister(_ sender: Any) {
+        btnAddPesticide.animateView()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.btnAddPesticide.alpha = 0
+                self.txtDescriptionLabel.alpha = 0
+            }, completion:  { _ in
+                self.noyakuTableView.isHidden = false
+                self.btnAddPesticide.isHidden = true
+                self.txtDescriptionLabel.isHidden = true
+                
+            })
+        }
+        
+//        let dialog = storyboard?.instantiateViewController(withIdentifier: "CustomDialogViewController") as! CustomDialogViewController
+//        present(dialog, animated: true)
     }
     
     private func editViewChanger(isEditing: Bool) {
@@ -66,7 +93,9 @@ class HomeViewController: UIViewController {
             btnEdit.tintColor = .systemGreen
         }
     }
-
+    
+    
+    
     private func makeViewEdit() -> UIBarButtonItem {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "icon_edit")!, for: .normal)
@@ -125,8 +154,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let dialog = storyboard?.instantiateViewController(withIdentifier: "CustomDialogViewController") as! CustomDialogViewController
         dialog.indexPath = indexPath.row
         
-        // 写真変更ダイアログを表示する。
-        // 結果を反映させる処理はまだ。
-        present(dialog, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.present(dialog, animated: true)
+        }
     }
 }

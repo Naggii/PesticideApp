@@ -10,14 +10,14 @@ import UIKit
 
 
 extension UIButton {
-    override func po
-    override func pointInside() -> Bool {
-        var rect = bounds
-        var insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        rect.origin.x -= insets.left
-        rect.origin.y -= insets.top
-        rect.size.width += insets.left + insets.right
-        rect.size.height += insets.top + insets.bottom
-        return CGRectContainsPoint(rect, point)
+    func animateView() {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
+            self.transform = CGAffineTransform(scaleX: 1.08, y: 1.08)
+        }) { (_) in
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10, options: .curveEaseOut, animations: {
+                self.transform = .identity
+                
+            }, completion: nil)
+        }
     }
 }
