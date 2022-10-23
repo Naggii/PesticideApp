@@ -10,6 +10,132 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--農薬登録画面-->
+        <scene sceneID="l2G-l4-vJl">
+            <objects>
+                <viewController id="Qhw-EI-BCz" customClass="PesticideRegisterViewController" customModule="PesticideApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dV1-7j-o3J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fxo-lQ-NhK">
+                                <rect key="frame" x="40" y="132" width="334" height="64.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="農薬の名前を記入" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyU-D9-xt7">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ホゲホゲ農薬" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAO-f9-scd">
+                                        <rect key="frame" x="0.0" y="30.5" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Qhw-EI-BCz" id="2zP-qn-VaS"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8JF-hd-WSD">
+                                <rect key="frame" x="40" y="236.5" width="334" height="54.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="農薬の散布可能回数を記入" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-7z-LPo">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="99" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-Kq-Pj7">
+                                        <rect key="frame" x="0.0" y="20.5" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Qhw-EI-BCz" id="Nmo-d2-x3F"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oov-HQ-4ZT" customClass="BGButton" customModule="PesticideApp" customModuleProvider="target">
+                                <rect key="frame" x="57" y="782" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="RqO-NY-ulD"/>
+                                    <constraint firstAttribute="height" constant="60" id="tFS-3q-sgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="登録内容確認へ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                        <point key="value" x="0.60000000000000009" y="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fwy-fY-LBl"/>
+                                    <action selector="touchUpButton:" destination="Qhw-EI-BCz" eventType="touchUpInside" id="z0h-8S-OKg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pAp-pi-8ck"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pAp-pi-8ck" firstAttribute="trailing" secondItem="8JF-hd-WSD" secondAttribute="trailing" constant="40" id="7jk-Vh-5Ic"/>
+                            <constraint firstItem="pAp-pi-8ck" firstAttribute="bottom" secondItem="oov-HQ-4ZT" secondAttribute="bottom" constant="20" id="IRG-7J-38G"/>
+                            <constraint firstItem="fxo-lQ-NhK" firstAttribute="top" secondItem="pAp-pi-8ck" secondAttribute="top" constant="40" id="XiE-QY-Zai"/>
+                            <constraint firstItem="8JF-hd-WSD" firstAttribute="top" secondItem="fxo-lQ-NhK" secondAttribute="bottom" constant="40" id="dL9-XK-57c"/>
+                            <constraint firstItem="8JF-hd-WSD" firstAttribute="leading" secondItem="pAp-pi-8ck" secondAttribute="leading" constant="40" id="dgE-dT-LZK"/>
+                            <constraint firstItem="fxo-lQ-NhK" firstAttribute="leading" secondItem="dV1-7j-o3J" secondAttribute="leadingMargin" constant="20" id="gJ5-TF-3wT"/>
+                            <constraint firstItem="oov-HQ-4ZT" firstAttribute="centerX" secondItem="dV1-7j-o3J" secondAttribute="centerX" id="iHO-ND-C2n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fxo-lQ-NhK" secondAttribute="trailing" constant="20" id="z5K-dw-PCv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="農薬登録画面" id="PiH-cX-Pkz"/>
+                    <connections>
+                        <outlet property="fieldPesticide" destination="VAO-f9-scd" id="BsA-Xt-355"/>
+                        <outlet property="fieldPesticideLimit" destination="dsv-Kq-Pj7" id="oZG-Fm-Kpa"/>
+                        <segue destination="eJu-PD-5df" kind="show" identifier="toCheckView" id="K2h-8x-If8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM3-Vy-J8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.9420289855075" y="189.50892857142856"/>
+        </scene>
+        <!--登録内容確認-->
+        <scene sceneID="9VO-AV-NlZ">
+            <objects>
+                <viewController id="eJu-PD-5df" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Krs-BG-ald">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6ZJ-pC-VzJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="登録内容確認" id="m75-IR-q3X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QW8-h3-ocF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855" y="190"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -47,10 +173,10 @@
                                 </items>
                             </navigationBar>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-uP-mkp" customClass="BGButton" customModule="PesticideApp" customModuleProvider="target">
-                                <rect key="frame" x="57" y="682" width="300" height="80"/>
+                                <rect key="frame" x="57" y="702" width="300" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Jjj-ND-fOw"/>
-                                    <constraint firstAttribute="height" constant="80" id="qAz-PH-TOx"/>
+                                    <constraint firstAttribute="height" constant="60" id="qAz-PH-TOx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="23"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -112,17 +238,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LE9-8X-ApD" secondAttribute="trailing" constant="20" id="nQr-If-Dg5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dzk-4E-Hm2"/>
                     <connections>
                         <outlet property="btnAddPesticide" destination="p7K-uP-mkp" id="0wS-Bm-PSH"/>
                         <outlet property="btnEdit" destination="QY6-ii-d1F" id="ju0-rs-CJ9"/>
                         <outlet property="btnMenu" destination="Qol-aL-NNH" id="dib-k0-8ed"/>
                         <outlet property="noyakuTableView" destination="39q-wK-5th" id="P9y-04-kUt"/>
                         <outlet property="txtDescriptionLabel" destination="LE9-8X-ApD" id="3Ck-Vh-QGr"/>
+                        <segue destination="p8p-AU-bkT" kind="presentation" identifier="toRegisterView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8BY-KV-4ro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291.304347826087" y="207.58928571428569"/>
+            <point key="canvasLocation" x="216" y="190"/>
         </scene>
         <!--Custom Dialog View Controller-->
         <scene sceneID="1UL-tN-0eI">
@@ -218,10 +346,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Etg-3V-IbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="208"/>
+            <point key="canvasLocation" x="-241" y="-530"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mMW-So-kU0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p8p-AU-bkT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LQc-MZ-psa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vF8-IM-Rim">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qhw-EI-BCz" kind="relationship" relationship="rootViewController" id="LMi-UU-uPd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfc-V3-sEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154" y="190"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="oov-HQ-4ZT">
+            <size key="intrinsicContentSize" width="161" height="45"/>
+        </designable>
         <designable name="p7K-uP-mkp">
             <size key="intrinsicContentSize" width="92" height="45"/>
         </designable>

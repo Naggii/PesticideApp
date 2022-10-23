@@ -23,6 +23,7 @@
 		BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */; };
 		BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DFFA290443530047EC6F /* SideMenu.storyboard */; };
 		BD81DFFD290446500047EC6F /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DFFC290446500047EC6F /* UITableViewCell+.swift */; };
+		BDB9AF9F290572BD005876FD /* PesticideRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */; };
 		BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */; };
 		BDCA2455290304D50054294D /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2454290304D50054294D /* Splash.storyboard */; };
 		BDCA2457290304E10054294D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2456290304E10054294D /* SplashViewController.swift */; };
@@ -82,6 +83,7 @@
 		BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PesticideCustomCell.xib; sourceTree = "<group>"; };
 		BD81DFFA290443530047EC6F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		BD81DFFC290446500047EC6F /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideRegisterViewController.swift; sourceTree = "<group>"; };
 		BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialogViewController.swift; sourceTree = "<group>"; };
 		BDCA2454290304D50054294D /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		BDCA2456290304E10054294D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				BD772CE928FEBFD400450E07 /* Home.storyboard */,
 				BD772CE728FEBFD400450E07 /* HomeViewController.swift */,
+				BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				BDCA2457290304E10054294D /* SplashViewController.swift in Sources */,
 				BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */,
 				BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */,
+				BDB9AF9F290572BD005876FD /* PesticideRegisterViewController.swift in Sources */,
 				BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */,
 				BDDC6BC9290486DE0097767E /* UIButton++.swift in Sources */,
 			);

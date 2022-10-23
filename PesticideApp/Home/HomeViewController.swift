@@ -70,11 +70,13 @@ class HomeViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {
                 self.btnAddPesticide.alpha = 0
                 self.txtDescriptionLabel.alpha = 0
+                
             }, completion:  { _ in
                 self.noyakuTableView.isHidden = false
                 self.btnAddPesticide.isHidden = true
                 self.txtDescriptionLabel.isHidden = true
                 
+                self.performSegue(withIdentifier: "toRegisterView", sender: nil)
             })
         }
         
