@@ -10,6 +10,10 @@
 		3FDA5FCE57FFFEA553E78987 /* Pods_PesticideAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4B1A954099BCD72C8008B /* Pods_PesticideAppTests.framework */; };
 		59268D3BEEF209CB4107CDAD /* Pods_PesticideApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CEB41E39FEE80856C9EAD6 /* Pods_PesticideApp.framework */; };
 		7E5274AD3B072DCA74A5F7E9 /* Pods_PesticideApp_PesticideAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966358D4540515C6A4269146 /* Pods_PesticideApp_PesticideAppUITests.framework */; };
+		BD03AF7F2905883000C58BD6 /* PesticideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF7E2905883000C58BD6 /* PesticideData.swift */; };
+		BD03AF81290591D800C58BD6 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF80290591D800C58BD6 /* String++.swift */; };
+		BD03AF83290591F200C58BD6 /* UIlabel+Accent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */; };
+		BD266590290AED7B00554E78 /* PesticideRealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26658F290AED7B00554E78 /* PesticideRealmData.swift */; };
 		BD6CF044290452E7006A03CE /* edit_pencil.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD6CF043290452E6006A03CE /* edit_pencil.gif */; };
 		BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE328FEBFD400450E07 /* AppDelegate.swift */; };
 		BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE528FEBFD400450E07 /* SceneDelegate.swift */; };
@@ -24,6 +28,7 @@
 		BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DFFA290443530047EC6F /* SideMenu.storyboard */; };
 		BD81DFFD290446500047EC6F /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DFFC290446500047EC6F /* UITableViewCell+.swift */; };
 		BDB9AF9F290572BD005876FD /* PesticideRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */; };
+		BDB9AFA129057A7B005876FD /* RegisterCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9AFA029057A7B005876FD /* RegisterCheckViewController.swift */; };
 		BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */; };
 		BDCA2455290304D50054294D /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2454290304D50054294D /* Splash.storyboard */; };
 		BDCA2457290304E10054294D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2456290304E10054294D /* SplashViewController.swift */; };
@@ -66,6 +71,10 @@
 		55105C36814D9C186A02ADE1 /* Pods-PesticideAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PesticideAppTests/Pods-PesticideAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		966358D4540515C6A4269146 /* Pods_PesticideApp_PesticideAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PesticideApp_PesticideAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6795E6371D5EF476C1207B7 /* Pods-PesticideAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideAppTests.release.xcconfig"; path = "Target Support Files/Pods-PesticideAppTests/Pods-PesticideAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		BD03AF7E2905883000C58BD6 /* PesticideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideData.swift; sourceTree = "<group>"; };
+		BD03AF80290591D800C58BD6 /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
+		BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Accent.swift"; sourceTree = "<group>"; };
+		BD26658F290AED7B00554E78 /* PesticideRealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideRealmData.swift; sourceTree = "<group>"; };
 		BD6CF043290452E6006A03CE /* edit_pencil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = edit_pencil.gif; path = ../../../Downloads/edit_pencil.gif; sourceTree = "<group>"; };
 		BD772CE028FEBFD400450E07 /* PesticideApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PesticideApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD772CE328FEBFD400450E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +93,7 @@
 		BD81DFFA290443530047EC6F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		BD81DFFC290446500047EC6F /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideRegisterViewController.swift; sourceTree = "<group>"; };
+		BDB9AFA029057A7B005876FD /* RegisterCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCheckViewController.swift; sourceTree = "<group>"; };
 		BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialogViewController.swift; sourceTree = "<group>"; };
 		BDCA2454290304D50054294D /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		BDCA2456290304E10054294D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +208,10 @@
 				BD81DFFC290446500047EC6F /* UITableViewCell+.swift */,
 				BDED21BE29046EA700D6DF8D /* BGButton.swift */,
 				BDDC6BC8290486DE0097767E /* UIButton++.swift */,
+				BD03AF7E2905883000C58BD6 /* PesticideData.swift */,
+				BD03AF80290591D800C58BD6 /* String++.swift */,
+				BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */,
+				BD26658F290AED7B00554E78 /* PesticideRealmData.swift */,
 			);
 			path = PesticideApp;
 			sourceTree = "<group>";
@@ -243,6 +257,7 @@
 				BD772CE928FEBFD400450E07 /* Home.storyboard */,
 				BD772CE728FEBFD400450E07 /* HomeViewController.swift */,
 				BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */,
+				BDB9AFA029057A7B005876FD /* RegisterCheckViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -530,16 +545,21 @@
 			files = (
 				BDDC6BC7290482400097767E /* Dialog++.swift in Sources */,
 				BD81DFFD290446500047EC6F /* UITableViewCell+.swift in Sources */,
+				BD03AF83290591F200C58BD6 /* UIlabel+Accent.swift in Sources */,
 				BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */,
 				BDED21BF29046EA700D6DF8D /* BGButton.swift in Sources */,
 				BD772CE828FEBFD400450E07 /* HomeViewController.swift in Sources */,
+				BD266590290AED7B00554E78 /* PesticideRealmData.swift in Sources */,
 				BD772D1528FEC55800450E07 /* PesticideCustomCell.swift in Sources */,
+				BD03AF81290591D800C58BD6 /* String++.swift in Sources */,
 				BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */,
 				BDCA2457290304E10054294D /* SplashViewController.swift in Sources */,
 				BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */,
 				BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */,
 				BDB9AF9F290572BD005876FD /* PesticideRegisterViewController.swift in Sources */,
 				BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */,
+				BDB9AFA129057A7B005876FD /* RegisterCheckViewController.swift in Sources */,
+				BD03AF7F2905883000C58BD6 /* PesticideData.swift in Sources */,
 				BDDC6BC9290486DE0097767E /* UIButton++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,6 +740,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -749,6 +770,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

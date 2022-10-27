@@ -91,7 +91,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="touchRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fwy-fY-LBl"/>
                                     <action selector="touchUpButton:" destination="Qhw-EI-BCz" eventType="touchUpInside" id="z0h-8S-OKg"/>
                                 </connections>
                             </button>
@@ -123,14 +122,78 @@
         <!--登録内容確認-->
         <scene sceneID="9VO-AV-NlZ">
             <objects>
-                <viewController id="eJu-PD-5df" sceneMemberID="viewController">
+                <viewController id="eJu-PD-5df" customClass="RegisterCheckViewController" customModule="PesticideApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Krs-BG-ald">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xZ-x6-BDJ" customClass="BGButton" customModule="PesticideApp" customModuleProvider="target">
+                                <rect key="frame" x="57" y="782" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TxA-ZS-4Nc"/>
+                                    <constraint firstAttribute="height" constant="60" id="hK0-KT-Afy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="決定">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                        <point key="value" x="0.60000000000000009" y="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchUpRegister:" destination="eJu-PD-5df" eventType="touchUpInside" id="hJk-Mj-x46"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これはテスト文言だよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSK-9U-poY">
+                                <rect key="frame" x="20" y="200" width="173.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これはテスト文言だよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jg-7h-a3C">
+                                <rect key="frame" x="20" y="300" width="173.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6ZJ-pC-VzJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6ZJ-pC-VzJ" firstAttribute="bottom" secondItem="1xZ-x6-BDJ" secondAttribute="bottom" constant="20" id="HnS-3n-0Ui"/>
+                            <constraint firstItem="vSK-9U-poY" firstAttribute="top" secondItem="Krs-BG-ald" secondAttribute="top" constant="200" id="dii-eo-wud"/>
+                            <constraint firstItem="vSK-9U-poY" firstAttribute="leading" secondItem="Krs-BG-ald" secondAttribute="leading" constant="20" id="lZW-qC-xtd"/>
+                            <constraint firstItem="5Jg-7h-a3C" firstAttribute="top" secondItem="Krs-BG-ald" secondAttribute="top" constant="300" id="ue0-Uf-ysI"/>
+                            <constraint firstItem="5Jg-7h-a3C" firstAttribute="leading" secondItem="Krs-BG-ald" secondAttribute="leading" constant="20" id="wm3-ct-rcS"/>
+                            <constraint firstItem="1xZ-x6-BDJ" firstAttribute="centerX" secondItem="Krs-BG-ald" secondAttribute="centerX" id="xBJ-mK-uUJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="登録内容確認" id="m75-IR-q3X"/>
+                    <connections>
+                        <outlet property="lblPesticideLimit" destination="5Jg-7h-a3C" id="Eet-Rz-ozP"/>
+                        <outlet property="lblPesticideName" destination="vSK-9U-poY" id="CBm-8H-rwA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QW8-h3-ocF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,6 +432,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="1xZ-x6-BDJ">
+            <size key="intrinsicContentSize" width="46" height="45"/>
+        </designable>
         <designable name="oov-HQ-4ZT">
             <size key="intrinsicContentSize" width="161" height="45"/>
         </designable>

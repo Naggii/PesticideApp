@@ -8,6 +8,7 @@
 import UIKit
 import SwiftGifOrigin
 import SideMenu
+import RealmSwift
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var noyakuTableView: UITableView!
@@ -17,26 +18,29 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var txtDescriptionLabel: UILabel!
     @IBOutlet weak var btnAddPesticide: BGButton!
     
-    // DEBUG
-    var listData: [String] = []
+    let realm = try! Realm()
+    var pesticideDataList: [PesticideData] = []
+    var pesticideList: Results<Pesticides>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeIsHiddenTableView()
+        pesticideList = realm.objects(Pesticides.self)
         changeIsHiddenTableView()
         noyakuTableView.register(UINib(nibName: "PesticideCustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
         setUpSideMenu()
     }
     
     private func changeIsHiddenTableView() {
-        if listData.isEmpty {
+//        if pesticideList == nil || pesticideList.isEmpty {
             noyakuTableView.isHidden = true
             txtDescriptionLabel.isHidden = false
             btnAddPesticide.isHidden = false
-        } else {
-            noyakuTableView.isHidden = false
-            txtDescriptionLabel.isHidden = true
-            btnAddPesticide.isHidden = true
-        }
+//        } else {
+//            noyakuTableView.isHidden = false
+//            txtDescriptionLabel.isHidden = true
+//            btnAddPesticide.isHidden = true
+//        }
     }
     
     private func setUpSideMenu() {
@@ -79,9 +83,6 @@ class HomeViewController: UIViewController {
                 self.performSegue(withIdentifier: "toRegisterView", sender: nil)
             })
         }
-        
-//        let dialog = storyboard?.instantiateViewController(withIdentifier: "CustomDialogViewController") as! CustomDialogViewController
-//        present(dialog, animated: true)
     }
     
     private func editViewChanger(isEditing: Bool) {
@@ -132,23 +133,33 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listData.count
+        return pesticideList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! PesticideCustomCell
+        
+        let limit = pesticideList[indexPath.row].pesticideLimit
+        
+        cell.txtNouyakuName.text = pesticideList[indexPath.row].pesticideName
+        cell.nouyakuLimit = limit
+        cell.calcLimit = limit
+        cell.txtLimitCounter.text = "残回数: \(String(limit))"
+        if (limit - Int(cell.txtNouyakuCount.text!)! <= 3) {
+            cell.txtLimitCounter.addAccent(pattern: "\(limit)", color: .red)
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 150
     }
     
-    
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let itemToMove = listData.remove(at: sourceIndexPath.row)
-        listData.insert(itemToMove, at: destinationIndexPath.row)
-    }
+//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        let itemToMove = pesticideList.remove(at: sourceIndexPath.row)
+//        pesticideList.insert(itemToMove, at: destinationIndexPath.row)
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.tappedAnimation()
@@ -159,5 +170,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.present(dialog, animated: true)
         }
+        
     }
 }
