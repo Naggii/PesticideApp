@@ -170,6 +170,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        // 編集モードでのみ、スワイプで消せるようにする。
         if tableView.isEditing {
             return UITableViewCell.EditingStyle.delete
         } else {
@@ -178,6 +179,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // cellの削除処理realmで消してからviewを更新
         try! self.realm.write {
             self.realm.delete(pesticideList[indexPath.row])
         }
