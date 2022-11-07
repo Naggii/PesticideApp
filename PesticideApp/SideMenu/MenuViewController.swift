@@ -13,7 +13,7 @@ import SideMenu
 // 機能はまだ作ってないのでいずれ作りたいね。٩( ᐛ )و
  
 class MenuViewController: UITableViewController {
-    var items: [String] = ["設定1","設定2","設定3"]
+    var items: [String] = ["農薬登録画面"]
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +45,15 @@ class MenuViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルの選択を解除
+        
         tableView.deselectRow(at: indexPath, animated: true)
         // サイドバーを閉じる
         dismiss(animated: true, completion: nil)
-         
+
         NotificationCenter.default.post(
             name: Notification.Name("SelectMenuNotification"),
             object: nil,
-            userInfo: ["itemNo": indexPath.row] // 返したいデータをセットする
+            userInfo: ["itemNo": indexPath.row] 
         )
     }
 }

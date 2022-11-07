@@ -18,6 +18,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var txtDescriptionLabel: UILabel!
     @IBOutlet weak var btnAddPesticide: BGButton!
     
+    private let cellHeight: CGFloat = 150
+    private let pesticideLowerLimit = 3
+    
     let realm = try! Realm()
     var pesticideDataList: [PesticideData] = []
     var pesticideList: Results<Pesticides>!
@@ -29,25 +32,32 @@ class HomeViewController: UIViewController {
         changeIsHiddenTableView()
         noyakuTableView.register(UINib(nibName: "PesticideCustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
         setUpSideMenu()
+        // サイドバーメニューからの通知を受け取る
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(catchSelectMenuNotification(notification:)),
+            name: Notification.Name("SelectMenuNotification"),
+            object: nil
+        )
     }
     
     private func changeIsHiddenTableView() {
-//        if pesticideList == nil || pesticideList.isEmpty {
+        if pesticideList == nil || pesticideList.isEmpty {
             noyakuTableView.isHidden = true
             txtDescriptionLabel.isHidden = false
             btnAddPesticide.isHidden = false
-//        } else {
-//            noyakuTableView.isHidden = false
-//            txtDescriptionLabel.isHidden = true
-//            btnAddPesticide.isHidden = true
-//        }
+        } else {
+            noyakuTableView.isHidden = false
+            txtDescriptionLabel.isHidden = true
+            btnAddPesticide.isHidden = true
+        }
     }
     
     private func setUpSideMenu() {
         let menuViewController = MenuViewController()
         let menuNavigationController = SideMenuNavigationController(rootViewController: menuViewController)
         menuNavigationController.settings = makeSettings()
-    
+        
         SideMenuManager.default.leftMenuNavigationController = menuNavigationController
         SideMenuManager.default.rightMenuNavigationController = menuNavigationController
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .left)
@@ -69,20 +79,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func touchRegister(_ sender: Any) {
         btnAddPesticide.animateView()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.btnAddPesticide.alpha = 0
-                self.txtDescriptionLabel.alpha = 0
-                
-            }, completion:  { _ in
-                self.noyakuTableView.isHidden = false
-                self.btnAddPesticide.isHidden = true
-                self.txtDescriptionLabel.isHidden = true
-                
-                self.performSegue(withIdentifier: "toRegisterView", sender: nil)
-            })
-        }
+        transitionRegisterView()
     }
     
     private func editViewChanger(isEditing: Bool) {
@@ -96,8 +93,6 @@ class HomeViewController: UIViewController {
             btnEdit.tintColor = .systemGreen
         }
     }
-    
-    
     
     private func makeViewEdit() -> UIBarButtonItem {
         let button = UIButton(type: .system)
@@ -114,16 +109,34 @@ class HomeViewController: UIViewController {
         settings.statusBarEndAlpha = 0
         return settings
     }
-
+    
     @objc func catchSelectMenuNotification(notification: Notification) -> Void {
         // メニューからの返り値を取得
-        let _ = notification.userInfo
-        // Do Something
+        let registerMenuRow = 0
+        let row = notification.userInfo!["itemNo"] as! Int
+        if row == registerMenuRow {
+            transitionRegisterView()
+        }
     }
     
     @IBAction func tapMenuAction(_ sender: Any) {
         let menu = SideMenuManager.default.leftMenuNavigationController!
         present(menu, animated: true, completion: nil)
+    }
+    
+    private func transitionRegisterView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.btnAddPesticide.alpha = 0
+                self.txtDescriptionLabel.alpha = 0
+            }, completion:  { _ in
+                self.noyakuTableView.isHidden = false
+                self.btnAddPesticide.isHidden = true
+                self.txtDescriptionLabel.isHidden = true
+                
+                self.performSegue(withIdentifier: "toRegisterView", sender: nil)
+            })
+        }
     }
 }
 
@@ -145,7 +158,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.nouyakuLimit = limit
         cell.calcLimit = limit
         cell.txtLimitCounter.text = "残回数: \(String(limit))"
-        if (limit - Int(cell.txtNouyakuCount.text!)! <= 3) {
+        if (limit - Int(cell.txtNouyakuCount.text!)! <= pesticideLowerLimit) {
             cell.txtLimitCounter.addAccent(pattern: "\(limit)", color: .red)
         }
         
@@ -153,13 +166,23 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return cellHeight
     }
     
-//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-//        let itemToMove = pesticideList.remove(at: sourceIndexPath.row)
-//        pesticideList.insert(itemToMove, at: destinationIndexPath.row)
-//    }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if tableView.isEditing {
+            return UITableViewCell.EditingStyle.delete
+        } else {
+            return UITableViewCell.EditingStyle.none
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        try! self.realm.write {
+            self.realm.delete(pesticideList[indexPath.row])
+        }
+        noyakuTableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.tappedAnimation()
@@ -167,6 +190,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let dialog = storyboard?.instantiateViewController(withIdentifier: "CustomDialogViewController") as! CustomDialogViewController
         dialog.indexPath = indexPath.row
         
+        // animationを見せたいので、delayをかけてるのよ
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.present(dialog, animated: true)
         }
