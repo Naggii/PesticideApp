@@ -27,14 +27,10 @@ class RegisterCheckViewController: UIViewController {
     }
     
     @IBAction func touchUpRegister(_ sender: Any) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let homeVc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             homeVc.modalTransitionStyle = .crossDissolve
             homeVc.modalPresentationStyle = .fullScreen
-            homeVc.pesticideDataList.append(PesticideData.init(name: self.pesticideName, limit: self.pesticideLimit))
-            
             let pesticides = Pesticides()
             pesticides.pesticideName = self.pesticideName
             pesticides.pesticideLimit = self.pesticideLimit

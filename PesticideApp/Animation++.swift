@@ -38,3 +38,31 @@ extension UITableViewCell {
         )
     }
 }
+
+extension UIImageView {
+    func tappedAnimation()  {
+        var transform = CGAffineTransform.identity
+        transform = transform.scaledBy(x: 0.96, y: 0.96)
+        UIView.animate(
+            withDuration: 0.2,
+            delay: 0,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0,
+            options: [], animations: {
+                self.transform = transform
+            }, completion: {_ in
+                var transform = CGAffineTransform.identity
+                transform = transform.scaledBy(x: 1.0, y: 1.0)
+                UIView.animate(
+                    withDuration: 0.2,
+                    delay: 0,
+                    usingSpringWithDamping: 0.8,
+                    initialSpringVelocity: 0,
+                    options: [], animations: {
+                        self.transform = transform
+                    }, completion: nil)
+            }
+        )
+    }
+}
+

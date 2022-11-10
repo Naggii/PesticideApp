@@ -42,24 +42,23 @@ class LaunchScreenManager {
     
     func fillParentViewWithView() {
         parentView!.addSubview(view!)
-        
+        let seg1 = view!.viewWithTag(1)! as! UIImageView?
         view!.frame = parentView!.bounds
         view!.center = parentView!.center
+        seg1?.loadGif(name: "farmer")
     }
     
     func hideRingSegments() {
         let seg = view!.viewWithTag(3)!
         let seg2 = view!.viewWithTag(2)!
         
-        seg2.isHidden = false
-        
         UIView.animate(
             withDuration: 0.8,
             delay: 1.0,
             options: .curveLinear,
             animations: {
+                seg2.isHidden = false
                 seg.alpha = 0.0
-                seg2.alpha = 0.0
             },
             completion: { _ in
                 UIView.animate(

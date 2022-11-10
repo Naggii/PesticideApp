@@ -14,6 +14,7 @@
 		BD03AF81290591D800C58BD6 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF80290591D800C58BD6 /* String++.swift */; };
 		BD03AF83290591F200C58BD6 /* UIlabel+Accent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */; };
 		BD266590290AED7B00554E78 /* PesticideRealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26658F290AED7B00554E78 /* PesticideRealmData.swift */; };
+		BD3AF5D3291C043700E9611B /* farmer.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD3AF5D2291C043700E9611B /* farmer.gif */; };
 		BD6CF044290452E7006A03CE /* edit_pencil.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD6CF043290452E6006A03CE /* edit_pencil.gif */; };
 		BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE328FEBFD400450E07 /* AppDelegate.swift */; };
 		BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE528FEBFD400450E07 /* SceneDelegate.swift */; };
@@ -26,7 +27,7 @@
 		BD772D1528FEC55800450E07 /* PesticideCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772D1328FEC55800450E07 /* PesticideCustomCell.swift */; };
 		BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */; };
 		BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DFFA290443530047EC6F /* SideMenu.storyboard */; };
-		BD81DFFD290446500047EC6F /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DFFC290446500047EC6F /* UITableViewCell+.swift */; };
+		BD81DFFD290446500047EC6F /* Animation++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DFFC290446500047EC6F /* Animation++.swift */; };
 		BDB9AF9F290572BD005876FD /* PesticideRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */; };
 		BDB9AFA129057A7B005876FD /* RegisterCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9AFA029057A7B005876FD /* RegisterCheckViewController.swift */; };
 		BDCA244F2902EEB90054294D /* CustomDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */; };
@@ -45,6 +46,7 @@
 		BDDC6BC7290482400097767E /* Dialog++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC6BC6290482400097767E /* Dialog++.swift */; };
 		BDDC6BC9290486DE0097767E /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC6BC8290486DE0097767E /* UIButton++.swift */; };
 		BDED21BF29046EA700D6DF8D /* BGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED21BE29046EA700D6DF8D /* BGButton.swift */; };
+		BDF60ECC291C336B0033E7D8 /* ImageViewSave++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF60ECB291C336B0033E7D8 /* ImageViewSave++.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,7 @@
 		BD03AF80290591D800C58BD6 /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
 		BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Accent.swift"; sourceTree = "<group>"; };
 		BD26658F290AED7B00554E78 /* PesticideRealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideRealmData.swift; sourceTree = "<group>"; };
+		BD3AF5D2291C043700E9611B /* farmer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = farmer.gif; path = ../../farmer.gif; sourceTree = "<group>"; };
 		BD6CF043290452E6006A03CE /* edit_pencil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = edit_pencil.gif; path = ../../../Downloads/edit_pencil.gif; sourceTree = "<group>"; };
 		BD772CE028FEBFD400450E07 /* PesticideApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PesticideApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD772CE328FEBFD400450E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +94,7 @@
 		BD772D1328FEC55800450E07 /* PesticideCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideCustomCell.swift; sourceTree = "<group>"; };
 		BD772D1428FEC55800450E07 /* PesticideCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PesticideCustomCell.xib; sourceTree = "<group>"; };
 		BD81DFFA290443530047EC6F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
-		BD81DFFC290446500047EC6F /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		BD81DFFC290446500047EC6F /* Animation++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation++.swift"; sourceTree = "<group>"; };
 		BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideRegisterViewController.swift; sourceTree = "<group>"; };
 		BDB9AFA029057A7B005876FD /* RegisterCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCheckViewController.swift; sourceTree = "<group>"; };
 		BDCA244E2902EEB90054294D /* CustomDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialogViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		BDDC6BC6290482400097767E /* Dialog++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dialog++.swift"; sourceTree = "<group>"; };
 		BDDC6BC8290486DE0097767E /* UIButton++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton++.swift"; sourceTree = "<group>"; };
 		BDED21BE29046EA700D6DF8D /* BGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGButton.swift; sourceTree = "<group>"; };
+		BDF60ECB291C336B0033E7D8 /* ImageViewSave++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageViewSave++.swift"; sourceTree = "<group>"; };
 		CFF4B1A954099BCD72C8008B /* Pods_PesticideAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PesticideAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A19A8A715448876CBCD427 /* Pods-PesticideApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideApp.debug.xcconfig"; path = "Target Support Files/Pods-PesticideApp/Pods-PesticideApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D7BEBE8FDC36B16BE59EA327 /* Pods-PesticideApp-PesticideAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideApp-PesticideAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PesticideApp-PesticideAppUITests/Pods-PesticideApp-PesticideAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,13 +209,15 @@
 				BD772CF128FEBFD600450E07 /* Info.plist */,
 				BDCA246F29032F850054294D /* icons8-menu.gif */,
 				BD6CF043290452E6006A03CE /* edit_pencil.gif */,
-				BD81DFFC290446500047EC6F /* UITableViewCell+.swift */,
+				BD3AF5D2291C043700E9611B /* farmer.gif */,
+				BD81DFFC290446500047EC6F /* Animation++.swift */,
 				BDED21BE29046EA700D6DF8D /* BGButton.swift */,
 				BDDC6BC8290486DE0097767E /* UIButton++.swift */,
 				BD03AF7E2905883000C58BD6 /* PesticideData.swift */,
 				BD03AF80290591D800C58BD6 /* String++.swift */,
 				BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */,
 				BD26658F290AED7B00554E78 /* PesticideRealmData.swift */,
+				BDF60ECB291C336B0033E7D8 /* ImageViewSave++.swift */,
 			);
 			path = PesticideApp;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				BDCA2467290321AB0054294D /* NotoSansJP-Bold.otf in Resources */,
 				BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */,
 				BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */,
+				BD3AF5D3291C043700E9611B /* farmer.gif in Resources */,
 				BD772CED28FEBFD600450E07 /* Assets.xcassets in Resources */,
 				BD6CF044290452E7006A03CE /* edit_pencil.gif in Resources */,
 				BDCA2455290304D50054294D /* Splash.storyboard in Resources */,
@@ -544,7 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDC6BC7290482400097767E /* Dialog++.swift in Sources */,
-				BD81DFFD290446500047EC6F /* UITableViewCell+.swift in Sources */,
+				BD81DFFD290446500047EC6F /* Animation++.swift in Sources */,
 				BD03AF83290591F200C58BD6 /* UIlabel+Accent.swift in Sources */,
 				BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */,
 				BDED21BF29046EA700D6DF8D /* BGButton.swift in Sources */,
@@ -556,6 +563,7 @@
 				BDCA2457290304E10054294D /* SplashViewController.swift in Sources */,
 				BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */,
 				BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */,
+				BDF60ECC291C336B0033E7D8 /* ImageViewSave++.swift in Sources */,
 				BDB9AF9F290572BD005876FD /* PesticideRegisterViewController.swift in Sources */,
 				BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */,
 				BDB9AFA129057A7B005876FD /* RegisterCheckViewController.swift in Sources */,

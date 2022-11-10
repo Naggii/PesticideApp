@@ -8,12 +8,21 @@
 //
 import UIKit
 
+
+protocol DialogVCDelegate {
+    func setImageView(image: UIImage, indexPath: IndexPath)
+}
+
 class CustomDialogViewController: UIViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var index: UILabel!
     @IBOutlet weak var btnImageSelecgt: UIButton!
-    
-    var indexPath: Int?
+    @IBOutlet weak var xImg: UIButton!
+    @IBOutlet weak var checkImg: UIButton!
+        
+    var indexPath: IndexPath?
+    var delegate: DialogVCDelegate?
+    private var selectedUiImage: UIImage? = nil
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -23,10 +32,9 @@ class CustomDialogViewController: UIViewController, UIViewControllerTransitionin
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        xImg.tintColor = .systemRed
         view.backgroundColor = .clear
-        if let row = indexPath {
-//            index.text = String(row)
-        }
+        checkImg.isHidden = true
     }
     @IBOutlet weak var debugView: UIImageView!
     
@@ -39,6 +47,8 @@ class CustomDialogViewController: UIViewController, UIViewControllerTransitionin
     }
     
     @IBAction func okButtonDidTap(_ sender: Any) {
+        guard let uiImage = selectedUiImage else { return dismiss(animated: true)}
+        delegate?.setImageView(image: uiImage, indexPath: indexPath!)
         dismiss(animated: true)
     }
     
@@ -69,8 +79,10 @@ extension CustomDialogViewController: UIImagePickerControllerDelegate {
             let heightSize = debugView.frame.height // 画面の縦の大きさを取得
             let imageViewBackground = UIImageView(frame: CGRect(x: 0, y: 0, width: widthSize, height: heightSize)) // 背景画像の大きさを設定
             imageViewBackground.image = (info[.originalImage] as! UIImage) // カメラロールから受け取った画像を設定
-            self.debugView.addSubview(imageViewBackground) // 背景画像を追加する
 
+            self.selectedUiImage = (info[.originalImage] as! UIImage)
+            self.debugView.addSubview(imageViewBackground) // 背景画像を追加する
+            self.checkImg.isHidden = false
             picker.dismiss(animated: true)
         }
 }
