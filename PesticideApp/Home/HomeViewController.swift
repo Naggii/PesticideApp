@@ -35,11 +35,11 @@ class HomeViewController: UIViewController {
         changeIsHiddenTableView()
         noyakuTableView.register(UINib(nibName: "PesticideCustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
         setUpSideMenu()
-        pesticideList.forEach {
-            print("DBC::\($0.pesticideName)")
-            print("DBC::\($0.pesticideImagePath)")
-            print("DBC::::::::::::::::::::::::::::")
-        }
+//        pesticideList.forEach {
+//            print("DBC::\($0.pesticideName)")
+//            print("DBC::\($0.pesticideImagePath)")
+//            print("DBC::::::::::::::::::::::::::::")
+//        }
         // サイドバーメニューからの通知を受け取る
         NotificationCenter.default.addObserver(
             self,
@@ -261,11 +261,13 @@ extension HomeViewController: DialogVCDelegate {
         let pngImageData = image.pngData()
         do {
             try pngImageData!.write(to: documentDirectoryFileURL)
+
             try! realm.write {
-                pesticideList[indexPath.row].pesticideImagePath =
-                documentDirectoryFileURL.absoluteString
+                pesticideList[indexPath.row].pesticideImagePath = documentDirectoryFileURL.absoluteString
+                documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             }
-        } catch {
+        } catch let error {
+            print("DEBUG:: \(error)")
             self.dismiss(animated: true)
             let dialog = UIAlertController(title: "",
                                            message: "画像の保存に失敗しました。もう一度試してください。",
@@ -275,15 +277,11 @@ extension HomeViewController: DialogVCDelegate {
         }
     }
     
+    
     func createLocalDataFile() {
-         // 作成するテキストファイルの名前
-         let fileName = "\(NSUUID().uuidString).png"
-
-         // DocumentディレクトリのfileURLを取得
-         if documentDirectoryFileURL != nil {
-             // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
-             let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-             documentDirectoryFileURL = path
-         }
-     }
+        // 作成するテキストファイルの名前
+        let fileName = "\(NSUUID().uuidString).png"
+        let path = documentDirectoryFileURL.appendingPathComponent(fileName)
+        documentDirectoryFileURL = path
+    }
 }
