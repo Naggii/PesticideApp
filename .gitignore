@@ -1,83 +1,42 @@
-*~
+# Xcode
+## Mac OS X
 .DS_Store
 
-# Merge files
-*.orig
-
-# Binaries
-*.dylib
-*.a
-*.o
-*.d
-*.libdeps
-*.zip
-*.realm
-!examples/ios/swift/Migration/RealmTemplates/*.realm
-!examples/ios/objc/Migration/RealmTemplates/*.realm
-*.realm.lock
-
-# core
-core
-core-*
-realm-core-*-xcframework
-
-# sh build.sh test
+## Xcode build files
 build/
+DerivedData/
 
+## Xcode settings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3*.xcodeproj/*
 
-# sh build.sh cocoapods-setup
-/include
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
 
-# sh build.sh docs
-/docs/objc_output
-/docs/swift_output
-/Realm/RLMPlatform.h
+## Xcode Patch
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
 
-# XCode
-*.bak
-xcuserdata/
-project.xcworkspace
+## library
+Pods/*
+Carthage/Build/
+
+## Other
+*.moved-aside
 *.xccheckout
-DerivedData
-/.build
-
-# AppCode
-.idea/
-*.iml
-# backup and crash files
+*.xcscmblueprint
+*.xcuserstate
 *.swp
-
-# xcpretty
-build.log
-
-# ruby
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/test/tmp/
-/test/version_tmp/
-/tmp/
-
-## Carthage
-# Cartfiles are ignored because they're generated on demand in the installation examples
-Cartfile
-Carthage
-
-## Swift Version
-SwiftVersion.swift
-
-examples/ios/objc/Draw/Constants.h
-
-## Sync testing
-/.baas
-
-## Swiftpm
-.swiftpm
-.build
-Package.resolved
-
-examples/installation/ios/swift/SwiftPackageManagerExample/SwiftPackageManagerExample.xcodeproj
+xcuserdata/
+*.moved-aside
+!.gitkeep

@@ -1,6 +1,0 @@
-framework module Pods_PesticideApp {
-  umbrella header "Pods-PesticideApp-umbrella.h"
-
-  export *
-  module * { export * }
-}
