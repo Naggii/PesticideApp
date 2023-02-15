@@ -12,34 +12,17 @@ import RealmSwift
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var noyakuTableView: UITableView!
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var btnEdit: UIBarButtonItem!
     
     @IBOutlet weak var txtDescriptionLabel: UILabel!
     @IBOutlet weak var btnAddPesticide: BGButton!
     
-    private let cellHeight: CGFloat = 150
-    private let pesticideLowerLimit = 3
-    
-    var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-    
-    let realm = try! Realm()
-    var pesticideList: Results<Pesticides>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeIsHiddenTableView()
-        pesticideList = realm.objects(Pesticides.self)
-        changeIsHiddenTableView()
-        noyakuTableView.register(UINib(nibName: "PesticideCustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
+//        changeIsHiddenTableView()
         setUpSideMenu()
-//        pesticideList.forEach {
-//            print("DBC::\($0.pesticideName)")
-//            print("DBC::\($0.pesticideImagePath)")
-//            print("DBC::::::::::::::::::::::::::::")
-//        }
         // サイドバーメニューからの通知を受け取る
         NotificationCenter.default.addObserver(
             self,
@@ -58,18 +41,19 @@ class HomeViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isFirstOpend")
         }
     }
-    
-    private func changeIsHiddenTableView() {
-        if pesticideList == nil || pesticideList.isEmpty {
-            noyakuTableView.isHidden = true
-            txtDescriptionLabel.isHidden = false
-            btnAddPesticide.isHidden = false
-        } else {
-            noyakuTableView.isHidden = false
-            txtDescriptionLabel.isHidden = true
-            btnAddPesticide.isHidden = true
-        }
-    }
+  
+// nope
+//    private func changeIsHiddenTableView() {
+//        if pesticideList == nil || pesticideList.isEmpty {
+//            noyakuTableView.isHidden = true
+//            txtDescriptionLabel.isHidden = false
+//            btnAddPesticide.isHidden = false
+//        } else {
+//            noyakuTableView.isHidden = false
+//            txtDescriptionLabel.isHidden = true
+//            btnAddPesticide.isHidden = true
+//        }
+//    }
     
     private func setUpSideMenu() {
         let menuViewController = MenuViewController()
@@ -91,23 +75,18 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBAction func tapEdit(_ sender: Any) {
-        guard !noyakuTableView.isHidden else {
-            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
-                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
-                                           preferredStyle: .alert)
-            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(dialog, animated: true, completion: nil)
-            return
-        }
-        noyakuTableView.isEditing = !noyakuTableView.isEditing
-        editViewChanger(isEditing: noyakuTableView.isEditing)
-    }
-    
-    @IBAction func touchRegister(_ sender: Any) {
-        btnAddPesticide.animateView()
-        transitionRegisterView()
-    }
+//    @IBAction func tapEdit(_ sender: Any) {
+//        guard !noyakuTableView.isHidden else {
+//            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
+//                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
+//                                           preferredStyle: .alert)
+//            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(dialog, animated: true, completion: nil)
+//            return
+//        }
+//        noyakuTableView.isEditing = !noyakuTableView.isEditing
+//        editViewChanger(isEditing: noyakuTableView.isEditing)
+//    }
     
     private func editViewChanger(isEditing: Bool) {
         if (isEditing) {
@@ -156,132 +135,12 @@ class HomeViewController: UIViewController {
                 self.btnAddPesticide.alpha = 0
                 self.txtDescriptionLabel.alpha = 0
             }, completion:  { _ in
-                self.noyakuTableView.isHidden = false
+//                self.noyakuTableView.isHidden = false
                 self.btnAddPesticide.isHidden = true
                 self.txtDescriptionLabel.isHidden = true
                 
                 self.performSegue(withIdentifier: "toRegisterView", sender: nil)
             })
         }
-    }
-}
-
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pesticideList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! PesticideCustomCell
-        let limit = pesticideList[indexPath.row].pesticideLimit
-        let name = pesticideList[indexPath.row].pesticideName
-        let count = pesticideList[indexPath.row].pesticideCount
-        let imagePath = pesticideList[indexPath.row].pesticideImagePath
-        let fileURL = URL(string: imagePath)
-        let filePath = fileURL?.path
-
-        cell.delegate = self
-        cell.txtNouyakuCount.text = String(count)
-        cell.stepperNouyaku.value = Double(count)
-        cell.txtLimitCounter.text = "残回数: \(String(limit - count))"
-        cell.nouyakuLimit = limit
-        cell.cellIndexPath = indexPath
-        cell.txtNouyakuName.text = name
-        
-        if (limit - count <= pesticideLowerLimit) {
-            cell.txtLimitCounter.addAccent(pattern: "\(limit)", color: .red)
-        }
-        if imagePath != "" {
-            cell.imgNouyaku.image = UIImage(contentsOfFile: filePath!)
-        }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeight
-    }
-    
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        // 編集モードでのみ、スワイプで消せるようにする。
-        if tableView.isEditing {
-            return UITableViewCell.EditingStyle.delete
-        } else {
-            return UITableViewCell.EditingStyle.none
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // cellの削除処理realmで消してからviewを更新
-        try! self.realm.write {
-            self.realm.delete(pesticideList[indexPath.row])
-        }
-        self.changeIsHiddenTableView()
-        noyakuTableView.reloadData()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-extension HomeViewController: TappedDelegate {
-    func cellChangedValue(tapCount: Int, indexPath: IndexPath) {
-        try! self.realm.write {
-            self.pesticideList[indexPath.row].pesticideCount = tapCount
-        }
-    }
-    
-    func tappedNouyakuImage(indexPath: IndexPath) {
-        let dialog = storyboard?.instantiateViewController(withIdentifier: "CustomDialogViewController") as! CustomDialogViewController
-        print("indexDialog: \(indexPath)")
-        dialog.indexPath = indexPath
-        dialog.delegate = self
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.present(dialog, animated: true)
-        }
-    }
-}
-
-extension HomeViewController: DialogVCDelegate {
-    
-    func setImageView(image: UIImage, indexPath: IndexPath) {
-        print("indexImageView: \(indexPath)")
-        let cell = noyakuTableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! PesticideCustomCell
-        cell.imgNouyaku.image = image
-        saveImage(image: image, indexPath: indexPath)
-        self.noyakuTableView.reloadRows(at: [indexPath], with: .fade)
-    }
-    
-    private func saveImage(image: UIImage, indexPath: IndexPath) {
-        createLocalDataFile()
-        let pngImageData = image.pngData()
-        do {
-            try pngImageData!.write(to: documentDirectoryFileURL)
-
-            try! realm.write {
-                pesticideList[indexPath.row].pesticideImagePath = documentDirectoryFileURL.absoluteString
-                documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            }
-        } catch let error {
-            print("DEBUG:: \(error)")
-            self.dismiss(animated: true)
-            let dialog = UIAlertController(title: "",
-                                           message: "画像の保存に失敗しました。もう一度試してください。",
-                                           preferredStyle: .alert)
-            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(dialog, animated: true, completion: nil)
-        }
-    }
-    
-    
-    func createLocalDataFile() {
-        // 作成するテキストファイルの名前
-        let fileName = "\(NSUUID().uuidString).png"
-        let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-        documentDirectoryFileURL = path
     }
 }

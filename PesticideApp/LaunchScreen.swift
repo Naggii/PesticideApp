@@ -45,7 +45,7 @@ class LaunchScreenManager {
         let seg1 = view!.viewWithTag(1)! as! UIImageView?
         view!.frame = parentView!.bounds
         view!.center = parentView!.center
-        seg1?.loadGif(name: "farmer")
+        seg1?.loadGif(asset: "farmerGif")
     }
     
     func hideRingSegments() {

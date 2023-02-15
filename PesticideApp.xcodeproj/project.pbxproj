@@ -14,8 +14,7 @@
 		BD03AF81290591D800C58BD6 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF80290591D800C58BD6 /* String++.swift */; };
 		BD03AF83290591F200C58BD6 /* UIlabel+Accent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */; };
 		BD266590290AED7B00554E78 /* PesticideRealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26658F290AED7B00554E78 /* PesticideRealmData.swift */; };
-		BD3AF5D3291C043700E9611B /* farmer.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD3AF5D2291C043700E9611B /* farmer.gif */; };
-		BD6CF044290452E7006A03CE /* edit_pencil.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD6CF043290452E6006A03CE /* edit_pencil.gif */; };
+		BD6287A2299D018100F90B52 /* PesticideSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6287A1299D018100F90B52 /* PesticideSelectViewController.swift */; };
 		BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE328FEBFD400450E07 /* AppDelegate.swift */; };
 		BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE528FEBFD400450E07 /* SceneDelegate.swift */; };
 		BD772CE828FEBFD400450E07 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD772CE728FEBFD400450E07 /* HomeViewController.swift */; };
@@ -42,7 +41,6 @@
 		BDCA246B290321AB0054294D /* NotoSansJP-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */; };
 		BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */; };
 		BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA246D29032DCE0054294D /* MenuViewController.swift */; };
-		BDCA247029032F850054294D /* icons8-menu.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDCA246F29032F850054294D /* icons8-menu.gif */; };
 		BDDC6BC7290482400097767E /* Dialog++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC6BC6290482400097767E /* Dialog++.swift */; };
 		BDDC6BC9290486DE0097767E /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC6BC8290486DE0097767E /* UIButton++.swift */; };
 		BDED21BF29046EA700D6DF8D /* BGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED21BE29046EA700D6DF8D /* BGButton.swift */; };
@@ -77,8 +75,7 @@
 		BD03AF80290591D800C58BD6 /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
 		BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Accent.swift"; sourceTree = "<group>"; };
 		BD26658F290AED7B00554E78 /* PesticideRealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideRealmData.swift; sourceTree = "<group>"; };
-		BD3AF5D2291C043700E9611B /* farmer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = farmer.gif; path = ../../farmer.gif; sourceTree = "<group>"; };
-		BD6CF043290452E6006A03CE /* edit_pencil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = edit_pencil.gif; path = ../../../Downloads/edit_pencil.gif; sourceTree = "<group>"; };
+		BD6287A1299D018100F90B52 /* PesticideSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideSelectViewController.swift; sourceTree = "<group>"; };
 		BD772CE028FEBFD400450E07 /* PesticideApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PesticideApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD772CE328FEBFD400450E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD772CE528FEBFD400450E07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +106,6 @@
 		BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Light.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Light.otf"; sourceTree = "<group>"; };
 		BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Regular.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
 		BDCA246D29032DCE0054294D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		BDCA246F29032F850054294D /* icons8-menu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "icons8-menu.gif"; path = "../../../Downloads/icons8-menu.gif"; sourceTree = "<group>"; };
 		BDDC6BC6290482400097767E /* Dialog++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dialog++.swift"; sourceTree = "<group>"; };
 		BDDC6BC8290486DE0097767E /* UIButton++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton++.swift"; sourceTree = "<group>"; };
 		BDED21BE29046EA700D6DF8D /* BGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGButton.swift; sourceTree = "<group>"; };
@@ -207,9 +203,6 @@
 				BDCA245E29031D0F0054294D /* LaunchScreen.xib */,
 				BDCA245C29030AB40054294D /* LaunchScreen.swift */,
 				BD772CF128FEBFD600450E07 /* Info.plist */,
-				BDCA246F29032F850054294D /* icons8-menu.gif */,
-				BD6CF043290452E6006A03CE /* edit_pencil.gif */,
-				BD3AF5D2291C043700E9611B /* farmer.gif */,
 				BD81DFFC290446500047EC6F /* Animation++.swift */,
 				BDED21BE29046EA700D6DF8D /* BGButton.swift */,
 				BDDC6BC8290486DE0097767E /* UIButton++.swift */,
@@ -264,6 +257,7 @@
 				BD772CE728FEBFD400450E07 /* HomeViewController.swift */,
 				BDB9AF9E290572BD005876FD /* PesticideRegisterViewController.swift */,
 				BDB9AFA029057A7B005876FD /* RegisterCheckViewController.swift */,
+				BD6287A1299D018100F90B52 /* PesticideSelectViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -409,15 +403,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */,
-				BDCA247029032F850054294D /* icons8-menu.gif in Resources */,
 				BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */,
 				BDCA2469290321AB0054294D /* NotoSansJP-Medium.otf in Resources */,
 				BDCA2467290321AB0054294D /* NotoSansJP-Bold.otf in Resources */,
 				BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */,
 				BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */,
-				BD3AF5D3291C043700E9611B /* farmer.gif in Resources */,
 				BD772CED28FEBFD600450E07 /* Assets.xcassets in Resources */,
-				BD6CF044290452E7006A03CE /* edit_pencil.gif in Resources */,
 				BDCA2455290304D50054294D /* Splash.storyboard in Resources */,
 				BD772CEB28FEBFD400450E07 /* Home.storyboard in Resources */,
 				BDCA246A290321AB0054294D /* NotoSansJP-Thin.otf in Resources */,
@@ -569,6 +560,7 @@
 				BDB9AFA129057A7B005876FD /* RegisterCheckViewController.swift in Sources */,
 				BD03AF7F2905883000C58BD6 /* PesticideData.swift in Sources */,
 				BDDC6BC9290486DE0097767E /* UIButton++.swift in Sources */,
+				BD6287A2299D018100F90B52 /* PesticideSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
