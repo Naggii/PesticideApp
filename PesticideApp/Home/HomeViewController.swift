@@ -14,8 +14,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var btnEdit: UIBarButtonItem!
-    
-    @IBOutlet weak var txtDescriptionLabel: UILabel!
     @IBOutlet weak var btnAddPesticide: BGButton!
     
     
@@ -31,7 +29,6 @@ class HomeViewController: UIViewController {
             object: nil
         )
     }
-    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,19 +38,6 @@ class HomeViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "isFirstOpend")
         }
     }
-  
-// nope
-//    private func changeIsHiddenTableView() {
-//        if pesticideList == nil || pesticideList.isEmpty {
-//            noyakuTableView.isHidden = true
-//            txtDescriptionLabel.isHidden = false
-//            btnAddPesticide.isHidden = false
-//        } else {
-//            noyakuTableView.isHidden = false
-//            txtDescriptionLabel.isHidden = true
-//            btnAddPesticide.isHidden = true
-//        }
-//    }
     
     private func setUpSideMenu() {
         let menuViewController = MenuViewController()
@@ -74,20 +58,7 @@ class HomeViewController: UIViewController {
             self.present(dialog, animated: true, completion: nil)
         }
     }
-    
-//    @IBAction func tapEdit(_ sender: Any) {
-//        guard !noyakuTableView.isHidden else {
-//            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
-//                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
-//                                           preferredStyle: .alert)
-//            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(dialog, animated: true, completion: nil)
-//            return
-//        }
-//        noyakuTableView.isEditing = !noyakuTableView.isEditing
-//        editViewChanger(isEditing: noyakuTableView.isEditing)
-//    }
-    
+
     private func editViewChanger(isEditing: Bool) {
         if (isEditing) {
             let image = UIImage(named: "icon_cancel")!
@@ -133,14 +104,39 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             UIView.animate(withDuration: 0.3, animations: {
                 self.btnAddPesticide.alpha = 0
-                self.txtDescriptionLabel.alpha = 0
             }, completion:  { _ in
-//                self.noyakuTableView.isHidden = false
+                // self.noyakuTableView.isHidden = false
                 self.btnAddPesticide.isHidden = true
-                self.txtDescriptionLabel.isHidden = true
                 
                 self.performSegue(withIdentifier: "toRegisterView", sender: nil)
             })
         }
     }
 }
+
+//    @IBAction func tapEdit(_ sender: Any) {
+//        guard !noyakuTableView.isHidden else {
+//            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
+//                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
+//                                           preferredStyle: .alert)
+//            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(dialog, animated: true, completion: nil)
+//            return
+//        }
+//        noyakuTableView.isEditing = !noyakuTableView.isEditing
+//        editViewChanger(isEditing: noyakuTableView.isEditing)
+//    }
+
+
+// nope
+//    private func changeIsHiddenTableView() {
+//        if pesticideList == nil || pesticideList.isEmpty {
+//            noyakuTableView.isHidden = true
+//            txtDescriptionLabel.isHidden = false
+//            btnAddPesticide.isHidden = false
+//        } else {
+//            noyakuTableView.isHidden = false
+//            txtDescriptionLabel.isHidden = true
+//            btnAddPesticide.isHidden = true
+//        }
+//    }
