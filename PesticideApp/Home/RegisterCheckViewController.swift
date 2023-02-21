@@ -13,7 +13,6 @@ import RealmSwift
 class RegisterCheckViewController: UIViewController {
     
     let realm = try! Realm()
-
     var pesticideName = ""
     var pesticideLimit = 0
     

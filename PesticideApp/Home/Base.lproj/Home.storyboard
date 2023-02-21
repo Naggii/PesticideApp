@@ -55,55 +55,73 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oov-HQ-4ZT" customClass="BGButton" customModule="PesticideApp" customModuleProvider="target">
-                                <rect key="frame" x="57" y="782" width="300" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M1w-CV-3pn">
+                                <rect key="frame" x="10" y="767" width="394" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wym-Xt-vde">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="QGz-vD-J5i"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_back">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="medium" weight="regular"/>
+                                            <color key="baseForegroundColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapToback:" destination="Qhw-EI-BCz" eventType="touchUpInside" id="1s9-nL-xRS"/>
+                                        </connections>
+                                    </button>
+                                    <button clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oov-HQ-4ZT" customClass="BGButton" customModule="PesticideApp" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="0.0" width="324" height="65"/>
+                                        <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="23"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="登録内容確認へ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                                <point key="value" x="0.59999999999999964" y="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                                <point key="value" x="1" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchUpButton:" destination="Qhw-EI-BCz" eventType="touchUpInside" id="z0h-8S-OKg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="RqO-NY-ulD"/>
-                                    <constraint firstAttribute="height" constant="60" id="tFS-3q-sgE"/>
+                                    <constraint firstAttribute="height" constant="65" id="BvE-Gq-vrz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="23"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="登録内容確認へ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" systemColor="systemGreenColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
-                                        <point key="value" x="0.60000000000000009" y="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
-                                        <point key="value" x="1" y="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="touchUpButton:" destination="Qhw-EI-BCz" eventType="touchUpInside" id="z0h-8S-OKg"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pAp-pi-8ck"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pAp-pi-8ck" firstAttribute="trailing" secondItem="8JF-hd-WSD" secondAttribute="trailing" constant="40" id="7jk-Vh-5Ic"/>
-                            <constraint firstItem="pAp-pi-8ck" firstAttribute="bottom" secondItem="oov-HQ-4ZT" secondAttribute="bottom" constant="20" id="IRG-7J-38G"/>
+                            <constraint firstItem="M1w-CV-3pn" firstAttribute="leading" secondItem="pAp-pi-8ck" secondAttribute="leading" constant="10" id="MRk-bh-ik9"/>
+                            <constraint firstItem="pAp-pi-8ck" firstAttribute="trailing" secondItem="M1w-CV-3pn" secondAttribute="trailing" constant="10" id="Vf1-nL-P6l"/>
                             <constraint firstItem="fxo-lQ-NhK" firstAttribute="top" secondItem="pAp-pi-8ck" secondAttribute="top" constant="40" id="XiE-QY-Zai"/>
                             <constraint firstItem="8JF-hd-WSD" firstAttribute="top" secondItem="fxo-lQ-NhK" secondAttribute="bottom" constant="40" id="dL9-XK-57c"/>
                             <constraint firstItem="8JF-hd-WSD" firstAttribute="leading" secondItem="pAp-pi-8ck" secondAttribute="leading" constant="40" id="dgE-dT-LZK"/>
                             <constraint firstItem="fxo-lQ-NhK" firstAttribute="leading" secondItem="dV1-7j-o3J" secondAttribute="leadingMargin" constant="20" id="gJ5-TF-3wT"/>
-                            <constraint firstItem="oov-HQ-4ZT" firstAttribute="centerX" secondItem="dV1-7j-o3J" secondAttribute="centerX" id="iHO-ND-C2n"/>
+                            <constraint firstItem="pAp-pi-8ck" firstAttribute="bottom" secondItem="M1w-CV-3pn" secondAttribute="bottom" constant="30" id="iBT-Zz-0ke"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fxo-lQ-NhK" secondAttribute="trailing" constant="20" id="z5K-dw-PCv"/>
                         </constraints>
                     </view>
@@ -209,6 +227,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4XA-8F-IBt" customClass="FSCalendar">
                                 <rect key="frame" x="20" y="112" width="374" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="YYYY年MM月"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleTextSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="subtitleTextSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0ii-vQ-Zqz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZZe-lR-h5u"/>
+                                </connections>
                             </view>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-kq-Y1M">
                                 <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -249,6 +295,7 @@
                         <outlet property="btnAddPesticide" destination="p7K-uP-mkp" id="0wS-Bm-PSH"/>
                         <outlet property="btnEdit" destination="QY6-ii-d1F" id="ju0-rs-CJ9"/>
                         <outlet property="btnMenu" destination="Qol-aL-NNH" id="dib-k0-8ed"/>
+                        <outlet property="pesCalendar" destination="4XA-8F-IBt" id="KCd-4E-mL6"/>
                         <segue destination="p8p-AU-bkT" kind="presentation" identifier="toRegisterView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8BY-KV-4ro"/>
                         <segue destination="JQt-U4-Fqk" kind="presentation" identifier="toPesSelectView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="LbE-Mp-qtu"/>
                     </connections>
@@ -484,6 +531,7 @@
     </designables>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="icon_back" width="64" height="64"/>
         <image name="icon_cancel" width="24" height="24"/>
         <image name="icon_edit" width="24" height="24"/>
         <image name="icon_menu" width="24" height="24"/>

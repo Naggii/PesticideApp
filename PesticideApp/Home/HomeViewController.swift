@@ -9,25 +9,19 @@ import UIKit
 import SwiftGifOrigin
 import SideMenu
 import RealmSwift
+import FSCalendar
 
 class HomeViewController: UIViewController {
-    
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var btnEdit: UIBarButtonItem!
+    @IBOutlet weak var pesCalendar: FSCalendar!
     @IBOutlet weak var btnAddPesticide: BGButton!
     
+    private let dateConverter = DateConverter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        changeIsHiddenTableView()
-        setUpSideMenu()
-        // サイドバーメニューからの通知を受け取る
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(catchSelectMenuNotification(notification:)),
-            name: Notification.Name("SelectMenuNotification"),
-            object: nil
-        )
+        setUpView()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -39,7 +33,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func setUpSideMenu() {
+    private func setUpView() {
         let menuViewController = MenuViewController()
         let menuNavigationController = SideMenuNavigationController(rootViewController: menuViewController)
         menuNavigationController.settings = makeSettings()
@@ -47,6 +41,20 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.rightMenuNavigationController = menuNavigationController
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .left)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
+        
+        // FSCalenderの曜日を日本語に変換する。
+        let calenderLabels = pesCalendar.calendarWeekdayView.weekdayLabels
+        calenderLabels.enumerated().forEach({ index, _ in
+            calenderLabels[index].text = dateConverter.convertIndexToWeekDay(index: index)
+        })
+        
+        // サイドバーメニューからの通知を受け取る
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(catchSelectMenuNotification(notification:)),
+            name: Notification.Name("SelectMenuNotification"),
+            object: nil
+        )
     }
     
     private func tutorialDialog() {
@@ -101,42 +109,12 @@ class HomeViewController: UIViewController {
     }
     
     private func transitionRegisterView() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.btnAddPesticide.alpha = 0
-            }, completion:  { _ in
-                // self.noyakuTableView.isHidden = false
-                self.btnAddPesticide.isHidden = true
-                
-                self.performSegue(withIdentifier: "toRegisterView", sender: nil)
-            })
-        }
+        self.performSegue(withIdentifier: "toRegisterView", sender: nil)
     }
 }
 
-//    @IBAction func tapEdit(_ sender: Any) {
-//        guard !noyakuTableView.isHidden else {
-//            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
-//                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
-//                                           preferredStyle: .alert)
-//            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(dialog, animated: true, completion: nil)
-//            return
-//        }
-//        noyakuTableView.isEditing = !noyakuTableView.isEditing
-//        editViewChanger(isEditing: noyakuTableView.isEditing)
-//    }
-
-
-// nope
-//    private func changeIsHiddenTableView() {
-//        if pesticideList == nil || pesticideList.isEmpty {
-//            noyakuTableView.isHidden = true
-//            txtDescriptionLabel.isHidden = false
-//            btnAddPesticide.isHidden = false
-//        } else {
-//            noyakuTableView.isHidden = false
-//            txtDescriptionLabel.isHidden = true
-//            btnAddPesticide.isHidden = true
-//        }
-//    }
+extension HomeViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        self.performSegue(withIdentifier: "toPesSelectView", sender: nil)
+    }
+}

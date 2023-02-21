@@ -24,7 +24,11 @@ class PesticideRegisterViewController: UIViewController {
             next?.pesticideLimit = Int(fieldPesticideLimit.text!)!
         }
     }
-    
+
+    @IBAction func tapToback(_ sender: Any) {
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func touchUpButton(_ sender: Any) {
         if (fieldPesticide.text != nil || fieldPesticideLimit.text != nil) {
