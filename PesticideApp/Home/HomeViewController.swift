@@ -13,7 +13,6 @@ import FSCalendar
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var btnMenu: UIBarButtonItem!
-    @IBOutlet weak var btnEdit: UIBarButtonItem!
     @IBOutlet weak var pesCalendar: FSCalendar!
     @IBOutlet weak var btnAddPesticide: BGButton!
     
@@ -40,6 +39,10 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .left)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
         
+        pesCalendar.appearance.titleFont = UIFont(name: "GillSans-Bold", size: 24)
+//        pesCalendar.appearance.subtitleFont = UIFont(name: "Noteworthy Bold", size: 20)
+        pesCalendar.appearance.weekdayFont = UIFont(name: "GillSans-SemiBold", size: 18)
+        pesCalendar.appearance.headerTitleFont = UIFont(name: "GillSans-Bold", size: 20)
         // FSCalenderの曜日を日本語に変換する。
         let calenderLabels = pesCalendar.calendarWeekdayView.weekdayLabels
         calenderLabels.enumerated().forEach({ index, _ in
@@ -63,25 +66,6 @@ class HomeViewController: UIViewController {
             dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(dialog, animated: true, completion: nil)
         }
-    }
-
-    private func editViewChanger(isEditing: Bool) {
-        if (isEditing) {
-            let image = UIImage(named: "icon_cancel")!
-            btnEdit.image = image
-            btnEdit.tintColor = .systemRed
-        } else {
-            let image = UIImage(named: "icon_edit")!
-            btnEdit.image = image
-            btnEdit.tintColor = .systemGreen
-        }
-    }
-    
-    private func makeViewEdit() -> UIBarButtonItem {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "icon_edit")!, for: .normal)
-        button.tintColor = .systemGreen
-        return UIBarButtonItem(customView: button)
     }
     
     private func makeSettings() -> SideMenuSettings {

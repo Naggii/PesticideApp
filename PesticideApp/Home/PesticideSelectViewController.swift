@@ -11,26 +11,66 @@ import RealmSwift
 
 
 class PesticideSelectViewController: UIViewController {
-    
-    private let cellHeight: CGFloat = 150
+    private let cellHeight: CGFloat = 110
     private let pesticideLowerLimit = 3
     
-    var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    @IBOutlet weak var btnEdit: UIBarButtonItem!
     
-    let realm = try! Realm()
-    var pesticideList: Results<Pesticides>!
+    private var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    private let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    
+    private let realm = try! Realm()
+    private var pesticideList: Results<Pesticides>!
     
     @IBOutlet weak var noyakuTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pesticideList = realm.objects(Pesticides.self)
-        noyakuTableView.register(UINib(nibName: "PesticideCustomCell", bundle: nil), forCellReuseIdentifier: "customCell")
+        noyakuTableView.register(UINib(nibName: "PesticideCustomCell",
+                                       bundle: nil),
+                                 forCellReuseIdentifier: "customCell")
     }
     
+    @IBAction func tapEdit(_ sender: Any) {
+//        guard !noyakuTableView.isHidden else {
+//            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
+//                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
+//                                           preferredStyle: .alert)
+//            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(dialog, animated: true, completion: nil)
+//            return
+//        }
+        noyakuTableView.isEditing = !noyakuTableView.isEditing
+        editViewChanger(isEditing: noyakuTableView.isEditing)
+    }
+    
+    @IBAction func tapToBack(_ sender: Any) {
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
+
     @IBAction func touchRegister(_ sender: Any) {
         self.performSegue(withIdentifier: "toRegisterViewFromSelect", sender: nil)
+    }
+    
+    private func editViewChanger(isEditing: Bool) {
+        if (isEditing) {
+            let image = UIImage(named: "icon_cancel")!
+            btnEdit.image = image
+            btnEdit.tintColor = .systemRed
+        } else {
+            let image = UIImage(named: "icon_edit")!
+            btnEdit.image = image
+            btnEdit.tintColor = .systemGreen
+        }
+    }
+    
+    private func makeViewEdit() -> UIBarButtonItem {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "icon_edit")!, for: .normal)
+        button.tintColor = .systemGreen
+        return UIBarButtonItem(customView: button)
     }
 }
 
@@ -81,6 +121,7 @@ extension PesticideSelectViewController: UITableViewDataSource, UITableViewDeleg
             return UITableViewCell.EditingStyle.none
         }
     }
+
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         // cellの削除処理realmで消してからviewを更新
@@ -92,7 +133,7 @@ extension PesticideSelectViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
