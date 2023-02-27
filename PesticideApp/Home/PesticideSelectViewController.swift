@@ -30,8 +30,7 @@ class PesticideSelectViewController: UIViewController {
     }
     
     @IBAction func touchRegister(_ sender: Any) {
-//        btnAddPesticide.animateView()
-//        transitionRegisterView()
+        self.performSegue(withIdentifier: "toRegisterViewFromSelect", sender: nil)
     }
 }
 

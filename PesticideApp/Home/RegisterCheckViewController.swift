@@ -39,5 +39,4 @@ class RegisterCheckViewController: UIViewController {
             self.present(homeVc, animated: true, completion: nil)
         }
     }
-    
 }

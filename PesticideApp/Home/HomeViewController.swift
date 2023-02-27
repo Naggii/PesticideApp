@@ -17,8 +17,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var pesCalendar: FSCalendar!
     @IBOutlet weak var btnAddPesticide: BGButton!
     
-    private let dateConverter = DateConverter()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -45,7 +43,7 @@ class HomeViewController: UIViewController {
         // FSCalenderの曜日を日本語に変換する。
         let calenderLabels = pesCalendar.calendarWeekdayView.weekdayLabels
         calenderLabels.enumerated().forEach({ index, _ in
-            calenderLabels[index].text = dateConverter.convertIndexToWeekDay(index: index)
+            calenderLabels[index].text = DateConverter().convertIndexToWeekDay(index: index)
         })
         
         // サイドバーメニューからの通知を受け取る

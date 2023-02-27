@@ -56,13 +56,15 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M1w-CV-3pn">
-                                <rect key="frame" x="10" y="767" width="394" height="65"/>
+                                <rect key="frame" x="20" y="782" width="374" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wym-Xt-vde">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="65"/>
+                                    <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wym-Xt-vde">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="QGz-vD-J5i"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <buttonConfiguration key="configuration" style="plain" image="icon_back">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="medium" weight="regular"/>
                                             <color key="baseForegroundColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oov-HQ-4ZT" customClass="BGButton" customModule="PesticideApp" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="0.0" width="324" height="65"/>
+                                        <rect key="frame" x="70" y="0.0" width="304" height="60"/>
                                         <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="23"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="登録内容確認へ">
@@ -107,7 +109,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="BvE-Gq-vrz"/>
+                                    <constraint firstAttribute="height" constant="60" id="BvE-Gq-vrz"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -115,13 +117,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pAp-pi-8ck" firstAttribute="trailing" secondItem="8JF-hd-WSD" secondAttribute="trailing" constant="40" id="7jk-Vh-5Ic"/>
-                            <constraint firstItem="M1w-CV-3pn" firstAttribute="leading" secondItem="pAp-pi-8ck" secondAttribute="leading" constant="10" id="MRk-bh-ik9"/>
-                            <constraint firstItem="pAp-pi-8ck" firstAttribute="trailing" secondItem="M1w-CV-3pn" secondAttribute="trailing" constant="10" id="Vf1-nL-P6l"/>
+                            <constraint firstItem="M1w-CV-3pn" firstAttribute="leading" secondItem="pAp-pi-8ck" secondAttribute="leading" constant="20" id="MRk-bh-ik9"/>
+                            <constraint firstItem="pAp-pi-8ck" firstAttribute="trailing" secondItem="M1w-CV-3pn" secondAttribute="trailing" constant="20" id="Vf1-nL-P6l"/>
                             <constraint firstItem="fxo-lQ-NhK" firstAttribute="top" secondItem="pAp-pi-8ck" secondAttribute="top" constant="40" id="XiE-QY-Zai"/>
                             <constraint firstItem="8JF-hd-WSD" firstAttribute="top" secondItem="fxo-lQ-NhK" secondAttribute="bottom" constant="40" id="dL9-XK-57c"/>
                             <constraint firstItem="8JF-hd-WSD" firstAttribute="leading" secondItem="pAp-pi-8ck" secondAttribute="leading" constant="40" id="dgE-dT-LZK"/>
                             <constraint firstItem="fxo-lQ-NhK" firstAttribute="leading" secondItem="dV1-7j-o3J" secondAttribute="leadingMargin" constant="20" id="gJ5-TF-3wT"/>
-                            <constraint firstItem="pAp-pi-8ck" firstAttribute="bottom" secondItem="M1w-CV-3pn" secondAttribute="bottom" constant="30" id="iBT-Zz-0ke"/>
+                            <constraint firstItem="pAp-pi-8ck" firstAttribute="bottom" secondItem="M1w-CV-3pn" secondAttribute="bottom" constant="20" id="iBT-Zz-0ke"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fxo-lQ-NhK" secondAttribute="trailing" constant="20" id="z5K-dw-PCv"/>
                         </constraints>
                     </view>
@@ -312,8 +314,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="39q-wK-5th">
-                                <rect key="frame" x="0.0" y="68" width="414" height="684"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="39q-wK-5th">
+                                <rect key="frame" x="0.0" y="98" width="414" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="JQt-U4-Fqk" id="mCt-2d-Mh2"/>
@@ -356,7 +358,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="touchRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Zi-cP-yoM"/>
-                                    <action selector="touchRegister:" destination="JQt-U4-Fqk" eventType="touchUpInside" id="ZdT-x0-A7v"/>
+                                    <action selector="touchRegister:" destination="JQt-U4-Fqk" eventType="touchUpInside" id="PJS-cK-Mpr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -366,7 +368,7 @@
                             <constraint firstItem="39q-wK-5th" firstAttribute="leading" secondItem="9Mp-P1-0l6" secondAttribute="leading" id="97t-gx-uz6"/>
                             <constraint firstItem="39q-wK-5th" firstAttribute="trailing" secondItem="9Mp-P1-0l6" secondAttribute="trailing" id="JVX-sa-yiY"/>
                             <constraint firstItem="p7K-uP-mkp" firstAttribute="top" secondItem="39q-wK-5th" secondAttribute="bottom" constant="30" id="Kzg-OC-Bn0"/>
-                            <constraint firstItem="39q-wK-5th" firstAttribute="top" secondItem="9Mp-P1-0l6" secondAttribute="top" constant="20" id="V2t-Cs-8Kq"/>
+                            <constraint firstItem="39q-wK-5th" firstAttribute="top" secondItem="9Mp-P1-0l6" secondAttribute="top" constant="50" id="V2t-Cs-8Kq"/>
                             <constraint firstItem="p7K-uP-mkp" firstAttribute="centerX" secondItem="lUD-ky-cdC" secondAttribute="centerX" id="XAy-HU-zvI"/>
                             <constraint firstItem="9Mp-P1-0l6" firstAttribute="bottom" secondItem="p7K-uP-mkp" secondAttribute="bottom" constant="20" id="a1x-aq-kFV"/>
                         </constraints>
@@ -374,11 +376,12 @@
                     <navigationItem key="navigationItem" id="VfR-pq-nWt"/>
                     <connections>
                         <outlet property="noyakuTableView" destination="39q-wK-5th" id="cQg-OF-kMZ"/>
+                        <segue destination="p8p-AU-bkT" kind="modal" identifier="toRegisterViewFromSelect" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3et-CH-BEe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJJ-tN-Lpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215.94202898550725" y="939.50892857142856"/>
+            <point key="canvasLocation" x="1154" y="-554"/>
         </scene>
         <!--Custom Dialog View Controller-->
         <scene sceneID="1UL-tN-0eI">
@@ -529,9 +532,12 @@
             <size key="intrinsicContentSize" width="92" height="45"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="3et-CH-BEe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="icon_back" width="64" height="64"/>
+        <image name="icon_back" width="50" height="50"/>
         <image name="icon_cancel" width="24" height="24"/>
         <image name="icon_edit" width="24" height="24"/>
         <image name="icon_menu" width="24" height="24"/>

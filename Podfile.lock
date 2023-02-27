@@ -1,4 +1,5 @@
 PODS:
+  - FSCalendar (2.8.4)
   - Realm (10.23.0):
     - Realm/Headers (= 10.23.0)
   - Realm/Headers (10.23.0)
@@ -8,23 +9,26 @@ PODS:
   - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
+  - FSCalendar
   - RealmSwift
   - SideMenu
   - SwiftGifOrigin
 
 SPEC REPOS:
   trunk:
+    - FSCalendar
     - Realm
     - RealmSwift
     - SideMenu
     - SwiftGifOrigin
 
 SPEC CHECKSUMS:
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   Realm: bdac9baede54becb2883f319fc50e9e12b35235c
   RealmSwift: e083456e083dcfd6ef9087cdde6b031ec6224783
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: 3c2a1c5d8cc3d1d2af20a705682245bc030948a4
+PODFILE CHECKSUM: a93a402df061d42a69981d4eda48e37c8321d23a
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2

@@ -10,6 +10,7 @@
 		3FDA5FCE57FFFEA553E78987 /* Pods_PesticideAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4B1A954099BCD72C8008B /* Pods_PesticideAppTests.framework */; };
 		59268D3BEEF209CB4107CDAD /* Pods_PesticideApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CEB41E39FEE80856C9EAD6 /* Pods_PesticideApp.framework */; };
 		7E5274AD3B072DCA74A5F7E9 /* Pods_PesticideApp_PesticideAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966358D4540515C6A4269146 /* Pods_PesticideApp_PesticideAppUITests.framework */; };
+		95F3324529A471FA008C424B /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F3324429A471FA008C424B /* DateConverter.swift */; };
 		BD03AF7F2905883000C58BD6 /* PesticideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF7E2905883000C58BD6 /* PesticideData.swift */; };
 		BD03AF81290591D800C58BD6 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF80290591D800C58BD6 /* String++.swift */; };
 		BD03AF83290591F200C58BD6 /* UIlabel+Accent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */; };
@@ -34,12 +35,6 @@
 		BDCA2457290304E10054294D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA2456290304E10054294D /* SplashViewController.swift */; };
 		BDCA245D29030AB40054294D /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA245C29030AB40054294D /* LaunchScreen.swift */; };
 		BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDCA245E29031D0F0054294D /* LaunchScreen.xib */; };
-		BDCA2467290321AB0054294D /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2461290321AB0054294D /* NotoSansJP-Bold.otf */; };
-		BDCA2468290321AB0054294D /* NotoSansJP-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2462290321AB0054294D /* NotoSansJP-Black.otf */; };
-		BDCA2469290321AB0054294D /* NotoSansJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2463290321AB0054294D /* NotoSansJP-Medium.otf */; };
-		BDCA246A290321AB0054294D /* NotoSansJP-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */; };
-		BDCA246B290321AB0054294D /* NotoSansJP-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */; };
-		BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */; };
 		BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA246D29032DCE0054294D /* MenuViewController.swift */; };
 		BDDC6BC7290482400097767E /* Dialog++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC6BC6290482400097767E /* Dialog++.swift */; };
 		BDDC6BC9290486DE0097767E /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC6BC8290486DE0097767E /* UIButton++.swift */; };
@@ -69,6 +64,7 @@
 		23CEB41E39FEE80856C9EAD6 /* Pods_PesticideApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PesticideApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4949B5BA21A3CC78DEF5FF5B /* Pods-PesticideApp-PesticideAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideApp-PesticideAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PesticideApp-PesticideAppUITests/Pods-PesticideApp-PesticideAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		55105C36814D9C186A02ADE1 /* Pods-PesticideAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PesticideAppTests/Pods-PesticideAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95F3324429A471FA008C424B /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		966358D4540515C6A4269146 /* Pods_PesticideApp_PesticideAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PesticideApp_PesticideAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6795E6371D5EF476C1207B7 /* Pods-PesticideAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PesticideAppTests.release.xcconfig"; path = "Target Support Files/Pods-PesticideAppTests/Pods-PesticideAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD03AF7E2905883000C58BD6 /* PesticideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesticideData.swift; sourceTree = "<group>"; };
@@ -99,12 +95,6 @@
 		BDCA2456290304E10054294D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BDCA245C29030AB40054294D /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		BDCA245E29031D0F0054294D /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		BDCA2461290321AB0054294D /* NotoSansJP-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Bold.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Bold.otf"; sourceTree = "<group>"; };
-		BDCA2462290321AB0054294D /* NotoSansJP-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Black.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Black.otf"; sourceTree = "<group>"; };
-		BDCA2463290321AB0054294D /* NotoSansJP-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Medium.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Medium.otf"; sourceTree = "<group>"; };
-		BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Thin.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Thin.otf"; sourceTree = "<group>"; };
-		BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Light.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Light.otf"; sourceTree = "<group>"; };
-		BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Regular.otf"; path = "../../../Noto_Sans_JP (1)/NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
 		BDCA246D29032DCE0054294D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BDDC6BC6290482400097767E /* Dialog++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dialog++.swift"; sourceTree = "<group>"; };
 		BDDC6BC8290486DE0097767E /* UIButton++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton++.swift"; sourceTree = "<group>"; };
@@ -192,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				BD81DFF7290440BD0047EC6F /* SideMenu */,
-				BDCA2460290321800054294D /* font */,
 				BDCA24592903078C0054294D /* Splash */,
 				BDCA2458290307770054294D /* CustomCells */,
 				BDCA244B2902EE100054294D /* Home */,
@@ -211,6 +200,7 @@
 				BD03AF82290591F200C58BD6 /* UIlabel+Accent.swift */,
 				BD26658F290AED7B00554E78 /* PesticideRealmData.swift */,
 				BDF60ECB291C336B0033E7D8 /* ImageViewSave++.swift */,
+				95F3324429A471FA008C424B /* DateConverter.swift */,
 			);
 			path = PesticideApp;
 			sourceTree = "<group>";
@@ -278,19 +268,6 @@
 				BDCA2456290304E10054294D /* SplashViewController.swift */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		BDCA2460290321800054294D /* font */ = {
-			isa = PBXGroup;
-			children = (
-				BDCA2462290321AB0054294D /* NotoSansJP-Black.otf */,
-				BDCA2461290321AB0054294D /* NotoSansJP-Bold.otf */,
-				BDCA2465290321AB0054294D /* NotoSansJP-Light.otf */,
-				BDCA2463290321AB0054294D /* NotoSansJP-Medium.otf */,
-				BDCA2466290321AB0054294D /* NotoSansJP-Regular.otf */,
-				BDCA2464290321AB0054294D /* NotoSansJP-Thin.otf */,
-			);
-			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,18 +379,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDCA246C290321AB0054294D /* NotoSansJP-Regular.otf in Resources */,
 				BDCA245F29031D0F0054294D /* LaunchScreen.xib in Resources */,
-				BDCA2469290321AB0054294D /* NotoSansJP-Medium.otf in Resources */,
-				BDCA2467290321AB0054294D /* NotoSansJP-Bold.otf in Resources */,
 				BD81DFFB290443530047EC6F /* SideMenu.storyboard in Resources */,
 				BD772D1628FEC55800450E07 /* PesticideCustomCell.xib in Resources */,
 				BD772CED28FEBFD600450E07 /* Assets.xcassets in Resources */,
 				BDCA2455290304D50054294D /* Splash.storyboard in Resources */,
 				BD772CEB28FEBFD400450E07 /* Home.storyboard in Resources */,
-				BDCA246A290321AB0054294D /* NotoSansJP-Thin.otf in Resources */,
-				BDCA2468290321AB0054294D /* NotoSansJP-Black.otf in Resources */,
-				BDCA246B290321AB0054294D /* NotoSansJP-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +526,7 @@
 				BD772CE428FEBFD400450E07 /* AppDelegate.swift in Sources */,
 				BD772CE628FEBFD400450E07 /* SceneDelegate.swift in Sources */,
 				BDF60ECC291C336B0033E7D8 /* ImageViewSave++.swift in Sources */,
+				95F3324529A471FA008C424B /* DateConverter.swift in Sources */,
 				BDB9AF9F290572BD005876FD /* PesticideRegisterViewController.swift in Sources */,
 				BDCA246E29032DCE0054294D /* MenuViewController.swift in Sources */,
 				BDB9AFA129057A7B005876FD /* RegisterCheckViewController.swift in Sources */,
@@ -732,7 +704,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				DEVELOPMENT_TEAM = Y3C4HSX4MR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PesticideApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -762,7 +734,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KEDZPCX5KQ;
+				DEVELOPMENT_TEAM = Y3C4HSX4MR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PesticideApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

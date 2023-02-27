@@ -9,6 +9,7 @@ target 'PesticideApp' do
   pod 'SideMenu'
   pod 'SwiftGifOrigin'
   pod 'RealmSwift'
+  pod 'FSCalendar'
 
   # Pods for PesticideApp
 
