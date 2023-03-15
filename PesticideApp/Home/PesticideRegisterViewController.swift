@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class PesticideRegisterViewController: UIViewController {
+class PesticideRegisterViewController: BaseViewController {
     @IBOutlet weak var fieldPesticide: UITextField!
     @IBOutlet weak var fieldPesticideLimit: UITextField!
     

@@ -11,7 +11,7 @@ import SideMenu
 import RealmSwift
 import FSCalendar
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var pesCalendar: FSCalendar!
     @IBOutlet weak var btnAddPesticide: BGButton!
@@ -39,15 +39,8 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .left)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
         
-        pesCalendar.appearance.titleFont = UIFont(name: "GillSans-Bold", size: 24)
-//        pesCalendar.appearance.subtitleFont = UIFont(name: "Noteworthy Bold", size: 20)
-        pesCalendar.appearance.weekdayFont = UIFont(name: "GillSans-SemiBold", size: 18)
-        pesCalendar.appearance.headerTitleFont = UIFont(name: "GillSans-Bold", size: 20)
-        // FSCalenderの曜日を日本語に変換する。
-        let calenderLabels = pesCalendar.calendarWeekdayView.weekdayLabels
-        calenderLabels.enumerated().forEach({ index, _ in
-            calenderLabels[index].text = DateConverter().convertIndexToWeekDay(index: index)
-        })
+        pesCalendar.changeWeekDayLabelToJP()
+        pesCalendar.setUpGilSansFonts()
         
         // サイドバーメニューからの通知を受け取る
         NotificationCenter.default.addObserver(
@@ -57,17 +50,7 @@ class HomeViewController: UIViewController {
             object: nil
         )
     }
-    
-    private func tutorialDialog() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            let dialog = UIAlertController(title: "インストールありがとうございます！",
-                                           message: "このアプリは、簡単に農薬を登録して散布回数を管理することができるアプリです。\n今後のアップデートで更に機能を追加していきます。",
-                                           preferredStyle: .alert)
-            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(dialog, animated: true, completion: nil)
-        }
-    }
-    
+
     private func makeSettings() -> SideMenuSettings {
         var settings = SideMenuSettings()
         settings.presentationStyle = .menuSlideIn

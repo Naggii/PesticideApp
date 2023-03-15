@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 
-class RegisterCheckViewController: UIViewController {
+class RegisterCheckViewController: BaseViewController {
     
     let realm = try! Realm()
     var pesticideName = ""

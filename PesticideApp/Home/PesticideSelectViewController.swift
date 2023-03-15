@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 
-class PesticideSelectViewController: UIViewController {
+class PesticideSelectViewController: BaseViewController {
     private let cellHeight: CGFloat = 110
     private let pesticideLowerLimit = 3
     
@@ -33,25 +33,21 @@ class PesticideSelectViewController: UIViewController {
     }
     
     @IBAction func tapEdit(_ sender: Any) {
-//        guard !noyakuTableView.isHidden else {
-//            let dialog = UIAlertController(title: "まずは、登録しましょう！😆",
-//                                           message: "下のボタンの登録するボタンから登録できます。\n農薬を準備してください！",
-//                                           preferredStyle: .alert)
-//            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(dialog, animated: true, completion: nil)
-//            return
-//        }
+        guard !noyakuTableView.isHidden else {
+            registerDialog()
+            return
+        }
         noyakuTableView.isEditing = !noyakuTableView.isEditing
         editViewChanger(isEditing: noyakuTableView.isEditing)
     }
-    
+
     @IBAction func tapToBack(_ sender: Any) {
         self.dismiss(animated: true)
         self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func touchRegister(_ sender: Any) {
-        self.performSegue(withIdentifier: "toRegisterViewFromSelect", sender: nil)
+//        self.performSegue(withIdentifier: "toRegisterViewFromSelect", sender: nil)
     }
     
     private func editViewChanger(isEditing: Bool) {
@@ -128,12 +124,18 @@ extension PesticideSelectViewController: UITableViewDataSource, UITableViewDeleg
         try! self.realm.write {
             self.realm.delete(pesticideList[indexPath.row])
         }
-//        self.changeIsHiddenTableView()
+
+        // self.changeIsHiddenTableView()
         noyakuTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        showQuestionPesUseCount()
+        
+        if !cell.isSelected {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 }
 
@@ -185,8 +187,7 @@ extension PesticideSelectViewController: DialogVCDelegate {
             self.present(dialog, animated: true, completion: nil)
         }
     }
-    
-    
+
     func createLocalDataFile() {
         // 作成するテキストファイルの名前
         let fileName = "\(NSUUID().uuidString).png"

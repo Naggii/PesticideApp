@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -295,7 +295,7 @@
             </objects>
             <point key="canvasLocation" x="215.94202898550725" y="189.50892857142856"/>
         </scene>
-        <!--使用した農薬をタップ-->
+        <!--使用農薬選択画面-->
         <scene sceneID="gCC-oZ-WHO">
             <objects>
                 <viewController id="JQt-U4-Fqk" customClass="PesticideSelectViewController" customModule="PesticideApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -303,7 +303,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="39q-wK-5th">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="39q-wK-5th">
                                 <rect key="frame" x="0.0" y="92" width="414" height="660"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -318,7 +318,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="登録する">
+                                <state key="normal" title="TODO(未機能)">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -363,7 +363,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="f6e-B1-3f4" secondAttribute="bottom" constant="20" id="yPn-kD-kqt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="使用した農薬をタップ" id="VfR-pq-nWt">
+                    <navigationItem key="navigationItem" title="使用農薬選択画面" id="VfR-pq-nWt">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="EFn-b5-P07">
                             <connections>
                                 <action selector="tapToBack:" destination="JQt-U4-Fqk" id="OPI-uL-xgp"/>
@@ -384,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJJ-tN-Lpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="-720"/>
+            <point key="canvasLocation" x="2091" y="-865"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xQG-Mu-P1u">
@@ -401,7 +401,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS1-AC-LCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="-865"/>
+            <point key="canvasLocation" x="1154" y="-865"/>
         </scene>
         <!--Custom Dialog View Controller-->
         <scene sceneID="1UL-tN-0eI">
@@ -546,7 +546,7 @@
             <size key="intrinsicContentSize" width="46" height="39"/>
         </designable>
         <designable name="f6e-B1-3f4">
-            <size key="intrinsicContentSize" width="92" height="39"/>
+            <size key="intrinsicContentSize" width="162" height="39"/>
         </designable>
         <designable name="oov-HQ-4ZT">
             <size key="intrinsicContentSize" width="161" height="39"/>
