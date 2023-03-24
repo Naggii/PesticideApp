@@ -214,11 +214,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_leaf" translatesAutoresizingMaskIntoConstraints="NO" id="yJr-3R-iDl">
-                                <rect key="frame" x="20" y="0.0" width="394" height="896"/>
-                            </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4XA-8F-IBt" customClass="FSCalendar">
-                                <rect key="frame" x="20" y="112" width="374" height="730"/>
+                                <rect key="frame" x="20" y="112" width="374" height="400"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="YYYY年MM月"/>
@@ -264,21 +261,30 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xwW-tL-3ym">
+                                <rect key="frame" x="20" y="512" width="374" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="qoU-F5-P6n"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="l3C-dV-QBT"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ehe-kq-Y1M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1np-4A-eCe"/>
                             <constraint firstItem="Ehe-kq-Y1M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1wJ-Ep-ALq"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="4XA-8F-IBt" secondAttribute="bottom" constant="20" id="4GN-gn-CMK"/>
                             <constraint firstItem="4XA-8F-IBt" firstAttribute="top" secondItem="Ehe-kq-Y1M" secondAttribute="bottom" constant="20" id="5yh-YQ-e05"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xwW-tL-3ym" secondAttribute="bottom" id="6OD-Wz-epa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehe-kq-Y1M" secondAttribute="trailing" id="7EQ-MG-dSu"/>
                             <constraint firstItem="4XA-8F-IBt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9dP-OS-EwO"/>
-                            <constraint firstItem="yJr-3R-iDl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gfk-19-XY6"/>
-                            <constraint firstAttribute="bottom" secondItem="yJr-3R-iDl" secondAttribute="bottom" id="HVa-V2-PhV"/>
+                            <constraint firstItem="xwW-tL-3ym" firstAttribute="top" secondItem="4XA-8F-IBt" secondAttribute="bottom" id="K7w-Rd-FdU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xwW-tL-3ym" secondAttribute="trailing" constant="20" id="KRD-PF-1lK"/>
+                            <constraint firstItem="xwW-tL-3ym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NA7-Fj-n48"/>
                             <constraint firstItem="4XA-8F-IBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RQt-pF-fZv"/>
-                            <constraint firstAttribute="trailing" secondItem="yJr-3R-iDl" secondAttribute="trailing" id="dfW-cf-Dr5"/>
-                            <constraint firstItem="yJr-3R-iDl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="hW8-b2-0SD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4XA-8F-IBt" secondAttribute="trailing" constant="20" id="tVM-Gt-BwW"/>
                         </constraints>
                     </view>
@@ -286,6 +292,9 @@
                     <connections>
                         <outlet property="btnEdit" destination="QY6-ii-d1F" id="ju0-rs-CJ9"/>
                         <outlet property="btnMenu" destination="Qol-aL-NNH" id="dib-k0-8ed"/>
+                        <outlet property="dayInfoTableView" destination="xwW-tL-3ym" id="dXn-k4-YDv"/>
+                        <outlet property="homeNavBar" destination="Ehe-kq-Y1M" id="U0A-aR-fe5"/>
+                        <outlet property="navItem" destination="U7s-6c-9hX" id="Qf2-wP-7nL"/>
                         <outlet property="pesCalendar" destination="4XA-8F-IBt" id="KCd-4E-mL6"/>
                         <segue destination="p8p-AU-bkT" kind="presentation" identifier="toRegisterView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8BY-KV-4ro"/>
                         <segue destination="y1e-WT-IdX" kind="modal" identifier="toPesSelectView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="EIr-i6-uUO"/>
@@ -553,14 +562,13 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="3et-CH-BEe"/>
+        <segue reference="8BY-KV-4ro"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="icon_cancel" width="24" height="24"/>
         <image name="icon_edit" width="24" height="24"/>
-        <image name="icon_leaf" width="960" height="960"/>
         <image name="icon_menu" width="24" height="24"/>
         <image name="return" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">

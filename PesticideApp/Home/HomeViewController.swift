@@ -15,9 +15,15 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var pesCalendar: FSCalendar!
     @IBOutlet weak var btnAddPesticide: BGButton!
+    @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var homeNavBar: UINavigationBar!
+    @IBOutlet weak var dayInfoTableView: UITableView!
+    
+    var date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dayInfoTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         setUpView()
     }
 
@@ -39,8 +45,8 @@ class HomeViewController: BaseViewController {
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .left)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
         
-        pesCalendar.changeWeekDayLabelToJP()
         pesCalendar.setUpGilSansFonts()
+        pesCalendar.changeWeekDayLabelToJP()
         
         // サイドバーメニューからの通知を受け取る
         NotificationCenter.default.addObserver(
@@ -80,6 +86,21 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        self.performSegue(withIdentifier: "toPesSelectView", sender: nil)
+        self.date = date
+        dayInfoTableView.reloadData()
+//        self.performSegue(withIdentifier: "toPesSelectView", sender: nil)
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let initialData = "\(self.date.toStringWithCurrentLocale())"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = initialData
+        return cell
     }
 }
